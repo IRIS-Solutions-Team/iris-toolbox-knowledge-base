@@ -66,7 +66,7 @@ $$
 \newcommand{\tm}{{_{t-1}}}
 \newcommand{\Et}{\mathrm{E}_t}
 A \, \Et \begin{bmatrix} \xb_t \\ \xf\tp \end{bmatrix} + B \, 
-\begin{bmatrix} \xb\tm \\ \xf_t\end{bmatrix} + C \,e_t = 0, XX\tag{1}
+\begin{bmatrix} \xb\tm \\ \xf_t\end{bmatrix} + C \,e_t = 0, \tag{Model}
 $$
 
 where an $$\Nx\times 1$$ vector of endogenous variables consists of $$\xb_t$$,
