@@ -121,7 +121,7 @@ and
 $$
 S \Et \begin{bmatrix} s\tp \\ u\tp \end{bmatrix}
 + T \begin{bmatrix} s_t \\ u_t \end{bmatrix} + D \,e_t = 0,
-\tag{Schur-System}
+\tag{SchurSystem}
 $$
 
 where $$D = Q\, C$$, and $$S = Q A Z$$ and $$T = Q B Z$$ are both upper
@@ -159,7 +159,7 @@ The procedure now consists of four simple steps:
    $$\alpha_t$$, in recursive form;
 1. solving for the vector of forward-looking variables, $$\xf_t$$.
 
-First, we iterate the lower part of eq. $$\eqref{Schur-System}$$ forward and
+First, we iterate the lower part of eq. $$\eqref{SchurSystem}$$ forward and
 get the following solution in which we retain the effect of all future
 expected residuals, 
 
@@ -196,7 +196,7 @@ $$
 s_t = \alpha_{t-1} - U Z_{12} \, u_t,
 $$
 
-we can re-write the upper part of eq. $$\eqref{Schur-System}$$ as
+we can re-write the upper part of eq. $$\eqref{SchurSystem}$$ as
 
 $$
 S_{11} \alpha_t + (S_{12} - U Z_{12} )\,  \Et [ u\tp ] + T_{11} \alpha\tm + (T_{12} - U 
