@@ -8,9 +8,6 @@ Why is a triangular solution superior to the more conventional one with a genera
 
 The article is organized as follows. Section 2 explains the underlying assumptions and shows a recursive-form solution with a triangular transition matrix and forward expansion. Section 3 illustrates the algorithm on an example unit-root model. Appendix 1 provides details of the solution algorithm.
 
-$$
-
-$$
 
 ## The Model and Its Solution
 
