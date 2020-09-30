@@ -119,6 +119,7 @@ $$
 and
 
 $$
+\label{SchurSystem}
 S \Et \begin{bmatrix} s\tp \\ u\tp \end{bmatrix}
 + T \begin{bmatrix} s_t \\ u_t \end{bmatrix} + D \,e_t = 0,
 \tag{SchurSystem}
