@@ -33,6 +33,7 @@ A \, \Et \begin{bmatrix} \xb_t \\ \xf\tp \end{bmatrix} + B \,
 \begin{bmatrix} \xb\tm \\ \xf_t\end{bmatrix} + C \,e_t = 0,
 $$
 
+
 where $$\eqref{EqRESystem}$$ an $\Nx\times 1$ vector of endogenous variables consists of $\xb_t$, an $\Nb\times 1$ vector of **predetermined**, or backward-looking, variables for which $\Et \[ \xbt \] = \xb\_t$, with $\xb\tm$ being given, and $\xf\_t$, an $\Nf\times 1$ vector of \_\_non-predetermined\_, or forward-looking, variables. Futhermore, $e\_t$ is an $\Ne \times 1$ vector of exogenous processes, and $\Et\[\cdot\]$ is a time $t$ conditional expectations operator. The current realisation of the exogenous vector as well as its expectations, $e\_t$ and $\Et \[\,e\tpk\] $, $k=1,2,\ldots$, are known at time $t$. We, however, do not introduce any further assumptions about the law of motion for $e\_t$, apart from a~stability requirement adopted from BK, condition \(1c\) on page~1305. Obviously, the first-order difference equation \eqref{Eq:RESystem} can easily accommodate systems with lags and leads higher than one by simply augmenting $\xb\_t$ and $\xf\_t$ with auxiliary, time-shifted, variables.
 
 In the rest of this section, we construct a solution that has the following form:
