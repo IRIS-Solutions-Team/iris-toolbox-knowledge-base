@@ -1,3 +1,4 @@
+
 # First-Order Approximate Solution
 
 ## Introduction
@@ -11,7 +12,22 @@ The article is organized as follows. Section 2 explains the underlying assumptio
 
 ## The Model and Its Solution
 
-We use a version of the algorithm proposed by Klein \(2000\), which builds upon a generalized Schur \(also known as QZ\) decomposition when integrating away the expectations of endogenous variables. We deviate from Klein in three aspects. First, we transform the vector of predetermined \(or backward-looking\) variables so as to give rise to a triangular transition matrix in the resulting solution. Second, we allow unit roots in the model \(and treat them correctly as \textit{stable}, or \textit{non-exploding}, roots from the point of view of saddle-path stability\).\footnote{Contrary to footnote 8 on page 1410 in Klein, there is nothing spooky about unit roots.} Third, we provide explicit formulas for the effects of future expectations of exogenous inputs without assuming any specific process for them. In fact, in the last two aspects, we simply return to the very origins of solving RE models laid by \citet{Blanchard-Kahn:1980}, referred to as BK hencerforth.\footnote{And wonder why everyone seems to have long forgotten these two points in spite of how utterly useful they prove to be.}
+We use a version of the algorithm proposed by Klein \(2000\), which builds
+upon a generalized Schur \(also known as QZ\) decomposition when
+integrating away the expectations of endogenous variables. We deviate from
+Klein in three aspects. First, we transform the vector of predetermined
+\(or backward-looking\) variables so as to give rise to a triangular
+transition matrix in the resulting solution. Second, we allow unit roots in
+the model \(and treat them correctly as \textit{stable}, or
+\textit{non-exploding}, roots from the point of view of saddle-path
+stability\).\footnote{Contrary to footnote 8 on page 1410 in Klein, there
+is nothing spooky about unit roots.} Third, we provide explicit formulas
+for the effects of future expectations of exogenous inputs without assuming
+any specific process for them. In fact, in the last two aspects, we simply
+return to the very origins of solving RE models laid by
+\citet{Blanchard-Kahn:1980}, referred to as BK hencerforth.\footnote{And
+wonder why everyone seems to have long forgotten these two points in spite
+of how utterly useful they prove to be.}
 
 We consider the following form of linear, linearized, or log-linearized rational-expectations models:
 
@@ -25,34 +41,55 @@ $$
 \newcommand{\tpk}{{_{t+k}}}
 \newcommand{\tm}{{_{t-1}}}
 \newcommand{\mathrm{E}_t}
-
+\newcommand{\xf}{{x^f}}
+\newcommand{\xb}{{x^b}}
+\label{Eq:RESystem}
 A \, \Et \begin{bmatrix} \xb_t \\ \xf\tp \end{bmatrix} + B \, 
 \begin{bmatrix} \xb\tm \\ \xf_t\end{bmatrix} + C \,e_t = 0,
 $$
 
-where an $\Nx\times 1$ vector of endogenous variables consists of $\xb_t$, an $\Nb\times 1$ vector of **predetermined**, or backward-looking, variables for which $\Et \[ \xbt \] = \xb\_t$, with $\xb\tm$ being given, and $\xf\_t$, an $\Nf\times 1$ vector of \_\_non-predetermined_, or forward-looking, variables. Futhermore, $e\_t$ is an $\Ne \times 1$ vector of exogenous processes, and $\Et\[\cdot\]$ is a time $t$ conditional expectations operator. The current realisation of the exogenous vector as well as its expectations, $e\_t$ and $\Et \[\,e\tpk\] $, $k=1,2,\ldots$, are known at time $t$. We, however, do not introduce any further assumptions about the law of motion for $e\_t$, apart from a~stability requirement adopted from BK, condition \(1c\) on page~1305. Obviously, the first-order difference equation \eqref{Eq:RE\_system} can easily accommodate systems with lags and leads higher than one by simply augmenting $\xb\_t$ and $\xf\_t$ with auxiliary, time-shifted, variables.
+where an $\Nx\times 1$ vector of endogenous variables consists of $\xb_t$,
+an $\Nb\times 1$ vector of **predetermined**, or backward-looking,
+variables for which $\Et \[ \xbt \] = \xb\_t$, with $\xb\tm$ being given,
+and $\xf\_t$, an $\Nf\times 1$ vector of \_\_non-predetermined_, or
+forward-looking, variables. Futhermore, $e\_t$ is an $\Ne \times 1$ vector
+of exogenous processes, and $\Et\[\cdot\]$ is a time $t$ conditional
+expectations operator. The current realisation of the exogenous vector as
+well as its expectations, $e\_t$ and $\Et \[\,e\tpk\] $, $k=1,2,\ldots$,
+are known at time $t$. We, however, do not introduce any further
+assumptions about the law of motion for $e\_t$, apart from a~stability
+requirement adopted from BK, condition \(1c\) on page~1305. Obviously, the
+first-order difference equation \eqref{Eq:RESystem} can easily accommodate
+systems with lags and leads higher than one by simply augmenting $\xb\_t$
+and $\xf\_t$ with auxiliary, time-shifted, variables.
 
 In the rest of this section, we construct a solution that has the following form:
 
 $$
+\label{Eq:SolutionOne}
 \begin{gather}
-\label{Eq:The_Solution_One}
 \begin{bmatrix} \xf_t \\ \alpha_t \end{bmatrix}
 = \begin{bmatrix} 0 & \Mf \\ 0 & \Ma \end{bmatrix}
 \begin{bmatrix} \xf_{t-1} \\ \alpha_{t-1} \end{bmatrix} + R_0 \, e_t + R_1 \Et [e_{t+1}] + \cdots  R_k \Et [e_{t+k}], \\
-\label{Eq:The_Solution_Two}
+\label{Eq:SolutionTwo}
 \xb_t = U \alpha_t, 
 \end{gather}
 $$
 
 where $\alpha_t$ is a suitable transformation of the vector of predetermined variables such that $\Ma$, and hence also the overall transition matrix of the system, is upper triangular. Note that the expectations of endogenous variables, $\Et \[\xf_{t+1}\]$ translate, in general, into an infinite sum of expectations of exogenous processes, which are known by assumption.
 
-First, we take for granted that the system matrices $$A$$ and $$B$$ satisfy a~generalized saddle-path condition. In other words, they have exactly $\Nb$ generalized eigenvalues inside, or on, the unit circle \(called \textit{non-explosive}; recall that these also include unit roots\), and exactly $\Nf$ eigenvalues outside the unit circle \(called \textit{explosive}\).\footnote{See section 5.3.1 in Klein, and propositions 1 to 3 in BK.} Next, we can transform the vector of state variables and factorize the system \eqref{Eq:RE\_system} using the Schur generalized decomposition as follows:
+First, we take for granted that the system matrices $$A$$ and $$B$$ satisfy
+a~generalized saddle-path condition. In other words, they have exactly
+$\Nb$ generalized eigenvalues inside, or on, the unit circle \(called
+\textit{non-explosive}; recall that these also include unit roots\), and
+exactly $\Nf$ eigenvalues outside the unit circle \(called
+\textit{explosive}\).\footnote{See section 5.3.1 in Klein, and propositions
+1 to 3 in BK.} Next, we can transform the vector of state variables and
+factorize the system \eqref{Eq:RESystem} using the Schur generalized
+decomposition as follows:
 
 $$
-\label{Eq:Schur_tranform}
-\Et \begin{bmatrix} \xb_t \\ \xf\tp \end{bmatrix} = 
-Z \Et \begin{bmatrix} s\tp \\ u\tp \end{bmatrix},
+\label{Eq:SchurTransform}
 \quad \text{or} \quad 
 \begin{bmatrix} \xb\tm \\ \xf_t \end{bmatrix} = 
 Z \begin{bmatrix} s_t \\ u_t \end{bmatrix},
@@ -61,7 +98,7 @@ $$
 and
 
 $$
-\label{Eq:Schur_system}
+\label{Eq:SchurSystem}
 S \Et \begin{bmatrix} s\tp \\ u\tp \end{bmatrix}
 + T \begin{bmatrix} s_t \\ u_t \end{bmatrix} + D \,e_t = 0,
 $$
@@ -84,22 +121,37 @@ The procedure now consists of four simple steps:
 3. solving for the upper, non-explosive, part of the transformed vector, $\alpha\_t$, in recursive form;
 4. solving for the vector of forward-looking variables, $\xf\_t$.
 
-First, we iterate the lower part of eq. \eqref{Eq:Schur_system} forward and get the following solution in which we retain the effect of all future expected residuals, \begin{equation} \label{Eq:Unstable\_solution} u\_t = F e\_t + G \, F \, \Et \[ e\tp\] + G^2 F \, \Et \[ e_{t+2} \] + \cdots \end{equation} where
+First, we iterate the lower part of eq. \eqref{Eq:SchurSystem} forward and
+get the following solution in which we retain the effect of all future
+expected residuals, 
+
+$$
+\label{Eq:UnstableSolution}
+u_t = F e_t + G \, F \, \Et \[ e\tp\] + G^2 F \, \Et \[ e_{t+2} \] + \cdots
+$$
+
+where
 
 $$
 F = -(T_{22})^{-1} D_2, \quad G = -(T_{22})^{-1} S_{22},
 $$
 
-cf. eq. \(5.5\) in Klein. For ease of notation, we introduce a~conditional expectations operator, $\(\fce_t\)^k e\_t = \Et \[e_{t+k}\]$, and re-write \eqref{Eq:Unstable\_solution} as a polynomial in $\fce\_t$:
+cf. eq. \(5.5\) in Klein (2000). For ease of notation, we introduce
+a~conditional expectations operator, $\(\fce_t\)^k e\_t = \Et \[e_{t+k}\]$,
+and re-write \eqref{Eq:UnstableSolution} as a polynomial in $\fce_t$:
 
 $$
-\label{Eq:Unstable_solution_poly}
+\label{Eq:UnstableSolutionPoly}
 u_t = \left[ \sum\nolimits_{k=0}^\infty (G \,\fce_t)^k \right] F e_t .
 $$
 
-Second, we introduce $\alpha_t = \(Z_{11}\)^{-1} \xb_t$, and denote $U := \(Z_{11}\)^{-1}$ for future reference. The new vector $\alpha\_t$ is backward-looking, or predetermined, by construction. We will see shortly that this particular transformation leads to a triangularized transition matrix.
+Second, we introduce $\alpha_t = \(Z_{11}\)^{-1} \xb_t$, and denote $U :=
+\(Z_{11}\)^{-1}$ for future reference. The new vector $\alpha\_t$ is
+backward-looking, or predetermined, by construction. We will see shortly
+that this particular transformation leads to a triangularized transition
+matrix.
 
-Third, noting that from \eqref{Eq:Schur\_tranform}
+Third, noting that from \eqref{Eq:SchurTranform}
 
 $$
 \begin{gather}
@@ -108,27 +160,30 @@ $$
 s_t = \alpha_{t-1} - U Z_{12} \, u_t,
 $$
 
-we can re-write the upper part of eq.~\eqref{Eq:Schur\_system} as
+we can re-write the upper part of eq.~\eqref{Eq:SchurSystem} as
 
 $$
 S_{11} \alpha_t + (S_{12} - U Z_{12} )\,  \Et [ u\tp ] + T_{11} \alpha\tm + (T_{12} - U 
 Z_{12}) \, u_t + D_1 e_t = 0.
 $$
 
-After substituting for $u\_t$ and $\Et \[ u\tp \] $ from \eqref{Eq:Unstable\_solution\_poly}, we obtain the following process for $\alpha\_t$:
+After substituting for $u\_t$ and $\Et \[ u\tp \] $ from \eqref{Eq:UnstableSolutionPoly}, we obtain the following process for $\alpha\_t$:
 
 $$
 \alpha_t = M_\alpha \, \alpha\tm + R_\alpha(\fce_t) \, e_t ,
 $$
 
-where $M_\alpha = -\(S_{11}\) T_{11}$ is upper triangular \(or quasi-triangular\) by construction, and the coefficient matrices $R_{\alpha 0}$, $R_{\alpha 1}$, $R_{\alpha 2}$, $\ldots$ of the infinite polynomial
+where $M_\alpha = -\(S_{11}\) T_{11}$ is upper triangular \(or
+quasi-triangular\) by construction, and the coefficient matrices $R_{\alpha
+0}$, $R_{\alpha 1}$, $R_{\alpha 2}$, $\ldots$ of the infinite polynomial
 
 $$
 R_\alpha(\fce_t) = R_{\alpha,0} + R_{\alpha,1} \, \fce_t + R_{\alpha,2}\, (\fce_t)^2 + 
 \cdots
 $$
 
-can be easily calculated by evaluating the following polynominal expression up to any desired order:
+can be easily calculated by evaluating the following polynominal expression
+up to any desired order:
 
 $$
 \begin{multline*}
@@ -140,7 +195,8 @@ $$
 
 We provide the formulas for the coefficient matrices below.
 
-Fourth, we solve for the vector of forward-looking variables, $\xf\_t$. Using~ \eqref{Eq:Schur\_tranform}, we get
+Fourth, we solve for the vector of forward-looking variables, $\xf\_t$.
+Using~ \eqref{Eq:SchurTranform}, we get
 
 $$
 \xf_t = Z_{21} s_t + Z_{22} u_t = Z_{21} \alpha_{t-1} + (Z_{22} - Z_{21} U Z_{12} )\, u_t.
@@ -156,7 +212,7 @@ $$
 \end{gather*}
 $$
 
-we can now summarise the resulting dynamics of the model \eqref{Eq:RE\_system} as follows:
+we can now summarise the resulting dynamics of the model \eqref{Eq:RESystem} as follows:
 
 $$
 \begin{gather}
@@ -198,7 +254,8 @@ $$
 
 with $K := Z_{22} - Z_{21} U Z\_{12} $.
 
-We have now completed the all matrices in the triangular solution~\eqref{Eq:The\_Solution\_One}-\eqref{Eq:The\_Solution\_Two}.
+We have now completed the all matrices in the triangular
+solution~\eqref{Eq:SolutionOne}-\eqref{Eq:SolutionTwo}.
 
 ## Simulations of Anticipated Shocks
 
