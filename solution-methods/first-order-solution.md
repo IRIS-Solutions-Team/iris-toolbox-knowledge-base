@@ -1,14 +1,3 @@
-$$
-\newcommand{\Rf}{{R_f}}
-\newcommand{\Ra}{{R_\alpha}}
-\newcommand{\Mf}{{M_f}}
-\newcommand{\Ma}{{M_\alpha}}
-\newcommand{\fce}{{\phi}}
-\newcommand{\tp}{{_{t+1}}}
-\newcommand{\tpk}{{_{t+k}}}
-\newcommand{\tm}{{_{t-1}}}
-$$
-
 # First-Order Approximate Solution
 
 ## Introduction
@@ -20,5 +9,13 @@ Why is a triangular solution superior to the more conventional one with a genera
 The paper is organized as follows. Section 2 explains the underlying assumptions and shows a recursive-form solution with a triangular transition matrix and forward expansion. Section 3 illustrates the algorithm on an example unit-root model. Appendix 1 provides details of the solution algorithm.
 
 $$
+\newcommand{\Rf}{{R_f}}
+\newcommand{\Ra}{{R_\alpha}}
+\newcommand{\Mf}{{M_f}}
+\newcommand{\Ma}{{M_\alpha}}
+\newcommand{\fce}{{\phi}}
+\newcommand{\tp}{{_{t+1}}}
+\newcommand{\tpk}{{_{t+k}}}
+\newcommand{\tm}{{_{t-1}}}
 \Rf + 1
 $$
