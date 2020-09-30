@@ -62,7 +62,6 @@ $$
 $$
 
 $$
-\label{Model}
 A \, \Et \begin{bmatrix} \xb_t \\ \xf\tp \end{bmatrix} + B \, 
 \begin{bmatrix} \xb\tm \\ \xf_t\end{bmatrix} + C \,e_t = 0,
 \tag{Model}
@@ -123,7 +122,6 @@ $$
 and
 
 $$
-\label{SchurSystem}
 S \Et \begin{bmatrix} s\tp \\ u\tp \end{bmatrix}
 + T \begin{bmatrix} s_t \\ u_t \end{bmatrix} + D \,e_t = 0,
 \tag{SchurSystem}
