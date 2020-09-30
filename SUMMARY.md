@@ -1,5 +1,7 @@
 # Summary
 
+* [Home](home.md)
+
 ## Solution Methods
 
 * [First-Order Approximate Solution](first-order-solution.md)    
