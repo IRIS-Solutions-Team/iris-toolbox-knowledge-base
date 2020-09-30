@@ -1,1 +1,0 @@
-# Unit-Root Steady State

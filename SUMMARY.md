@@ -1,13 +1,14 @@
-# Summary
+# Table of contents
 
+* [Introduction](README.md)
 * [Home](home.md)
 
 ## Solution Methods
 
-* [First-Order Approximate Solution](first-order-solution.md)    
-* [Stacked-Time Nonlinear Solver](stacked-time-solver.md)
+* [First-Order Approximate Solution](solution-methods/first-order-solution.md)
+* [Stacked-Time Nonlinear Solver](solution-methods/stacked-time-solver.md)
 
 ## Steady State Calculations
 
-* [Unit-Root Steady States](unit-root-steady-state.md)    
+* [Unit-Root Steady States](steady-state-calculations/unit-root-steady-state.md)
 
