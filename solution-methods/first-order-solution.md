@@ -9,6 +9,16 @@ Why is a triangular solution superior to the more conventional one with a genera
 The article is organized as follows. Section 2 explains the underlying assumptions and shows a recursive-form solution with a triangular transition matrix and forward expansion. Section 3 illustrates the algorithm on an example unit-root model. Appendix 1 provides details of the solution algorithm.
 
 $$
+
+$$
+
+## The Model and Its Solution
+
+We use a version of the algorithm proposed by Klein \(2000\), which builds upon a generalized Schur \(also known as QZ\) decomposition when integrating away the expectations of endogenous variables. We deviate from Klein in three aspects. First, we transform the vector of predetermined \(or backward-looking\) variables so as to give rise to a triangular transition matrix in the resulting solution. Second, we allow unit roots in the model \(and treat them correctly as \textit{stable}, or \textit{non-exploding}, roots from the point of view of saddle-path stability\).\footnote{Contrary to footnote 8 on page 1410 in Klein, there is nothing spooky about unit roots.} Third, we provide explicit formulas for the effects of future expectations of exogenous inputs without assuming any specific process for them. In fact, in the last two aspects, we simply return to the very origins of solving RE models laid by \citet{Blanchard-Kahn:1980}, referred to as BK hencerforth.\footnote{And wonder why everyone seems to have long forgotten these two points in spite of how utterly useful they prove to be.}
+
+We consider the following form of linear, linearized, or log-linearized rational-expectations models:
+
+$$
 \newcommand{\Rf}{{R_f}}
 \newcommand{\Ra}{{R_\alpha}}
 \newcommand{\Mf}{{M_f}}
@@ -17,13 +27,8 @@ $$
 \newcommand{\tp}{{_{t+1}}}
 \newcommand{\tpk}{{_{t+k}}}
 \newcommand{\tm}{{_{t-1}}}
+\newcommand{\mathrm{E}_t}
 $$
-
-## The Model and Its Solution
-
-We use a version of the algorithm proposed by Klein \(2000\), which builds upon a generalized Schur \(also known as QZ\) decomposition when integrating away the expectations of endogenous variables. We deviate from Klein in three aspects. First, we transform the vector of predetermined \(or backward-looking\) variables so as to give rise to a triangular transition matrix in the resulting solution. Second, we allow unit roots in the model \(and treat them correctly as \textit{stable}, or \textit{non-exploding}, roots from the point of view of saddle-path stability\).\footnote{Contrary to footnote 8 on page 1410 in Klein, there is nothing spooky about unit roots.} Third, we provide explicit formulas for the effects of future expectations of exogenous inputs without assuming any specific process for them. In fact, in the last two aspects, we simply return to the very origins of solving RE models laid by \citet{Blanchard-Kahn:1980}, referred to as BK hencerforth.\footnote{And wonder why everyone seems to have long forgotten these two points in spite of how utterly useful they prove to be.}
-
-We consider the following form of linear, linearized, or log-linearized rational-expectations models:
 
 $$
 A \, \Et \begin{bmatrix} \xb_t \\ \xf\tp \end{bmatrix} + B \, 
