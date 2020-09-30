@@ -28,7 +28,6 @@ $$
 \newcommand{\Et}{\mathrm{E}_t}
 \newcommand{\xf}{{x^f}}
 \newcommand{\xb}{{x^b}}
-\label{EqRESystem}
 A \, \Et \begin{bmatrix} \xb_t \\ \xf\tp \end{bmatrix} + B \, 
 \begin{bmatrix} \xb\tm \\ \xf_t\end{bmatrix} + C \,e_t = 0,
 $$
