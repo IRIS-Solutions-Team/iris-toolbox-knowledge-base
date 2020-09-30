@@ -84,8 +84,8 @@ $$
 \begin{gather}
 \begin{bmatrix} \xf_t \\ \alpha_t \end{bmatrix}
 = \begin{bmatrix} 0 & \Mf \\ 0 & \Ma \end{bmatrix}
-\begin{bmatrix} \xf_{t-1} \\ \alpha_{t-1} \end{bmatrix} + R_0 \, e_t + R_1 \Et [e_{t+1}] + \cdots  R_k \Et [e_{t+k}], \\
-\label{Eq:SolutionTwo}
+\begin{bmatrix} \xf_{t-1} \\ \alpha_{t-1} \end{bmatrix} + R_0 \, e_t + R_1 \Et [e_{t+1}] + \cdots  R_k \Et [e_{t+k}],
+\tag{Solution} \\
 \xb_t = U \alpha_t, 
 \end{gather}
 $$
@@ -102,8 +102,8 @@ a generalized saddle-path condition. In other words, they have exactly
 $$\Nb$$ generalized eigenvalues inside, or on, the unit circle (called
 __non-explosive__; recall that these also include unit roots), and
 exactly $$\Nf$$ eigenvalues outside the unit circle (called
-\textit{explosive}).\footnote{See section 5.3.1 in Klein, and propositions
-1 to 3 in BK.} Next, we can transform the vector of state variables and
+_explosive_); see section 5.3.1 in Klein, and propositions
+1 to 3 in BK. Next, we can transform the vector of state variables and
 factorize the system $$\eqref{Model}$$ using the Schur generalized
 decomposition as follows:
 
@@ -123,7 +123,16 @@ S \Et \begin{bmatrix} s\tp \\ u\tp \end{bmatrix}
 \tag{Schur-System}
 $$
 
-where $D = Q\, C$, and $S = Q A Z$ and $T = Q B Z$ are both upper triangular (for complex Schur forms) or quasi-triangular (for real Schur forms) matrices,\footnotemark and $Q$ and $Z$ are unitary matrices. The new matrices can be split into blocks conformably with $\Nb$ and $\Nf$, \footnotetext{By quasi-triangular we mean a matrix with $1\times 1$ and $2\times 2$ blocks along the main diagonal, depending on the occurrence of real and complex eigenvalues, and with zeros below it. Whether we perform a complex or real Schur decomposition irrelevant for constructing the solution. The choice affects only the computational efficiency of the procedure.}
+where $$D = Q\, C$$, and $$S = Q A Z$$ and $$T = Q B Z$$ are both upper
+triangular (for complex Schur forms) or quasi-triangular (for real Schur
+forms) matrices, and $$Q$$ and $$Z$$ are unitary matrices. The new
+matrices can be split into blocks conformably with $$\Nb$$ and $$\Nf$$,
+By quasi-triangular we here kmean a matrix with $$1\times 1$$ and
+$$2\times 2$$ blocks along the main diagonal, depending on the occurrence of
+real and complex eigenvalues, and with zeros below it. Whether we perform a
+complex or real Schur decomposition irrelevant for constructing the
+solution. The choice affects only the computational efficiency of the
+procedure.}
 
 $$
 S = \begin{bmatrix} S_{11} & S_{12} \\ 0 & S_{22} \end{bmatrix}, \quad
@@ -132,22 +141,30 @@ Z = \begin{bmatrix} Z_{11} & Z_{12} \\ Z_{21} & Z_{12} \end{bmatrix}, \quad
 D = \begin{bmatrix} D_1 \\ D_2 \end{bmatrix} ,
 $$
 
-and arranged so that the upper left blocks $S_{11}$ and $T_{11}$ contain only the non-explosive eigenvalues whereas $S_{22}$ and $T_{22}$ have only the explosive ones. Furthermore, if there are unit roots in the system, we concentrate them in the upper-left blocks of $S_{11}$ and $T_{11}$; the reason for doing so becomes obvious later in the paper.
+and arranged so that the upper left blocks $$S_{11}$$ and $$T_{11}$$
+contain only the non-explosive eigenvalues whereas $$S_{22}$$ and
+$$T_{22}$$ have only the explosive ones. Furthermore, if there are unit
+roots in the system, we concentrate them in the upper-left blocks of
+$$S_{11}$$ and $$T_{11}$$; the reason for doing so becomes obvious later in
+the paper.
 
 The procedure now consists of four simple steps:
 
-1. solving the the lower, explosive, part of the transformed vector, $u_t$, using forward iterations;
-2. finding a transformation $\alpha_t$ of the predetermined vector, $\xb_t$,  such that it gives rise to a triangular transition matrix;
-3. solving for the upper, non-explosive, part of the transformed vector, $\alpha_t$, in recursive form;
-4. solving for the vector of forward-looking variables, $\xf_t$.
+1. solving the the lower, explosive, part of the transformed vector,
+   $$u_t$$, using forward iterations;
+1. finding a transformation $$\alpha_t$$ of the predetermined vector,
+   $$\xb_t$$,  such that it gives rise to a triangular transition matrix;
+1. solving for the upper, non-explosive, part of the transformed vector,
+   $$\alpha_t$$, in recursive form;
+1. solving for the vector of forward-looking variables, $$\xf_t$$.
 
 First, we iterate the lower part of eq. $$\eqref{Schur-System}$$ forward and
 get the following solution in which we retain the effect of all future
 expected residuals, 
 
 $$
-\label{Eq:UnstableSolution}
 u_t = F e_t + G \, F \, \Et \[ e\tp] + G^2 F \, \Et \[ e_{t+2} ] + \cdots
+\tag{Unstable-Solution}
 $$
 
 where
@@ -156,46 +173,46 @@ $$
 F = -(T_{22})^{-1} D_2, \quad G = -(T_{22})^{-1} S_{22},
 $$
 
-cf. eq. (5.5) in Klein (2000). For ease of notation, we introduce
+cf. eq. (5.5) in Klein. For ease of notation, we introduce
 a conditional expectations operator, $(\fce_t)^k e_t = \Et \[e_{t+k}]$,
-and re-write $$\eqref{Eq:UnstableSolution}$$ as a polynomial in $\fce_t$:
+and re-write $$\eqref{Unstable-Solution}$$ as a polynomial in $\fce_t$:
 
 $$
-\label{Eq:UnstableSolutionPoly}
 u_t = \left[ \sum\nolimits_{k=0}^\infty (G \,\fce_t)^k \right] F e_t .
+\tag{Unstable-Poly}
 $$
 
-Second, we introduce $\alpha_t = (Z_{11})^{-1} \xb_t$, and denote $U :=
-(Z_{11})^{-1}$ for future reference. The new vector $\alpha_t$ is
+Second, we introduce $$\alpha_t = (Z_{11})^{-1} \xb_t$$, and denote $$U :=
+(Z_{11})^{-1}$$ for future reference. The new vector $$\alpha_t$$ is
 backward-looking, or predetermined, by construction. We will see shortly
 that this particular transformation leads to a triangularized transition
 matrix.
 
-Third, noting that from $$\eqref{Eq:SchurTranform}$$
+Third, noting that from $$\eqref{Schur-Tranform}$$
 
 $$
-\begin{gather}
-\label{Eq:Triang_Transform}
 \Et [ s\tp ] = \alpha_t - U Z_{12} \, \Et [ u\tp ], \quad \text{or} \quad
 s_t = \alpha_{t-1} - U Z_{12} \, u_t,
 $$
 
-we can re-write the upper part of eq. $$\eqref{Eq:SchurSystem}$$ as
+we can re-write the upper part of eq. $$\eqref{Schur-System}$$ as
 
 $$
 S_{11} \alpha_t + (S_{12} - U Z_{12} )\,  \Et [ u\tp ] + T_{11} \alpha\tm + (T_{12} - U 
 Z_{12}) \, u_t + D_1 e_t = 0.
 $$
 
-After substituting for $u_t$ and $\Et \[ u\tp ] $ from $$\eqref{Eq:UnstableSolutionPoly}$$, we obtain the following process for $\alpha_t$:
+After substituting for $$u_t$$ and $$\Et \[ u\tp ]$$ from
+$$\eqref{Unstable-Poly}$$, we obtain the following process for $\alpha_t$:
 
 $$
 \alpha_t = M_\alpha \, \alpha\tm + R_\alpha(\fce_t) \, e_t ,
 $$
 
-where $M_\alpha = -(S_{11}) T_{11}$ is upper triangular (or
-quasi-triangular) by construction, and the coefficient matrices $R_{\alpha
-0}$, $R_{\alpha 1}$, $R_{\alpha 2}$, $\ldots$ of the infinite polynomial
+where $$M_\alpha = -(S_{11}) T_{11}$$ is upper triangular (or
+quasi-triangular) by construction, and the coefficient matrices $$R_{\alpha
+0}$$, $$R_{\alpha 1}$$, $$R_{\alpha 2}$$, $$\ldots$$ of the infinite
+polynomial
 
 $$
 R_\alpha(\fce_t) = R_{\alpha,0} + R_{\alpha,1} \, \fce_t + R_{\alpha,2}\, (\fce_t)^2 + 
@@ -215,8 +232,8 @@ $$
 
 We provide the formulas for the coefficient matrices below.
 
-Fourth, we solve for the vector of forward-looking variables, $\xf_t$.
-Using  $$\eqref{Eq:SchurTranform}$$, we get
+Fourth, we solve for the vector of forward-looking variables, $$\xf_t$$.
+Using  $$\eqref{Schur-Tranform}$$, we get
 
 $$
 \xf_t = Z_{21} s_t + Z_{22} u_t = Z_{21} \alpha_{t-1} + (Z_{22} - Z_{21} U Z_{12} )\, u_t.
@@ -232,7 +249,7 @@ $$
 \end{gather*}
 $$
 
-we can now summarise the resulting dynamics of the model $$$$\eqref{Model}$$$$ as follows:
+we can now summarise the resulting dynamics of the model $$\eqref{Model}$$ as follows:
 
 $$
 \begin{gather}
@@ -251,7 +268,7 @@ M = \begin{bmatrix} 0 & \Mf \\ 0 & \Ma \end{bmatrix}, \quad \text{and} \quad
 R(\cdot) = \begin{bmatrix} \Rf(\phi_t) \\ R_\alpha(\phi_t) \end{bmatrix}.
 $$
 
-Finally, the coefficient matrices for the polynomial $R_\alpha(\phi_t)$ are
+Finally, the coefficient matrices for the polynomial $$R_\alpha(\phi_t)$$ are
 
 $$
 \begin{align*}
@@ -262,10 +279,10 @@ R_{\alpha,k} &= (H G + J) G^{k-1} F,
 \end{align*}
 $$
 
-where $H := (S_{11})^{-1} (T_{11} U Z_{12} - T_{12} )$ 
+where $$H := (S_{11})^{-1} (T_{11} U Z_{12} - T_{12} )$$ 
 and 
-$J := (S_{11})^{-1} (S_{11} U Z_{12} -  S_{12} )$, whereas the coefficient
-matrices for $\Rf(\phi_t$) are
+$$J := (S_{11})^{-1} (S_{11} U Z_{12} -  S_{12} )$$, whereas the coefficient
+matrices for $$\Rf(\phi_t$$) are
 
 $$
 R_{f,0} &= K F, \\
@@ -274,10 +291,10 @@ R_{f,1} &= K G F, \\
 R_{f,k} &= K G^k F,
 $$
 
-with $K := Z_{22} - Z_{21} U Z_{12} $.
+with $$K := Z_{22} - Z_{21} U Z_{12} $$.
 
 We have now completed the all matrices in the triangular
-solution $$\eqref{Eq:SolutionOne}-\eqref{Eq:SolutionTwo}$$.
+solution $$\eqref{Solution}$$.
 
 ## Simulations of Anticipated Shocks
 
