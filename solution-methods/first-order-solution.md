@@ -1,5 +1,5 @@
-
 # First-Order Approximate Solution
+
 
 ## Introduction
 
@@ -23,12 +23,6 @@ solution greatly simplifies the treatment of models with unit roots, such
 as automated detection of non-stationary variables or initialization of a
 Kalman filter. We discuss and exemplify this point later in more detail.
 
-The article is organized as follows. Section 2 explains the underlying
-assumptions and shows a recursive-form solution with a triangular
-transition matrix and forward expansion. Section 3 illustrates the
-algorithm on an example unit-root model. Appendix 1 provides details of the
-solution algorithm.
-
 
 ## The Model and Its Solution
 
@@ -38,8 +32,8 @@ integrating away the expectations of endogenous variables. We deviate from
 Klein in three aspects. First, we transform the vector of predetermined
 (or backward-looking) variables so as to give rise to a triangular
 transition matrix in the resulting solution. Second, we allow unit roots in
-the model (and treat them correctly as **stable**, or
-**non-exploding**, roots from the point of view of saddle-path
+the model (and treat them correctly as __stable__, or
+__non-exploding__, roots from the point of view of saddle-path
 stability. Third, we provide explicit formulas
 for the effects of future expectations of exogenous inputs (shocks) without assuming
 any specific process for them. In fact, in the last two aspects, we simply
@@ -66,21 +60,21 @@ $$
 \newcommand{\tm}{{_{t-1}}}
 \newcommand{\Et}{\mathrm{E}_t}
 A \, \Et \begin{bmatrix} \xb_t \\ \xf\tp \end{bmatrix} + B \, 
-\begin{bmatrix} \xb\tm \\ \xf_t\end{bmatrix} + C \,e_t = 0, \tag{Eq1}
+\begin{bmatrix} \xb\tm \\ \xf_t\end{bmatrix} + C \,e_t = 0, \tag{Model}
 $$
 
-where $$\eqref{Eq1}$$ an $$\Nx\times 1$$ vector of endogenous variables consists of $$\xb_t$$,
-an $$\Nb\times 1$$ vector of **predetermined**, or backward-looking,
-variables for which $$\Et \[ \xbt \] = \xb_t$$, with $$\xb\tm$$ being given,
-and $$\xf_t$$, an $$\Nf\times 1$$ vector of **non-predetermined**, or
+where an $$\Nx\times 1$$ vector of endogenous variables consists of $$\xb_t$$,
+an $$\Nb\times 1$$ vector of __predetermined__, or backward-looking,
+variables for which $$\Et [ \xb_t ] = \xb_t$$, with $$\xb\tm$$ being given,
+and $$\xf_t$$, an $$\Nf\times 1$$ vector of __non-predetermined__, or
 forward-looking, variables. Futhermore, $$e_t$$ is an $$\Ne \times 1$$ vector
-of exogenous processes, and $$\Et\[\cdot\]$$ is a time $$t$$ conditional
+of exogenous processes, and $$\Et[\cdot]$$ is a time $$t$$ conditional
 expectations operator. The current realisation of the exogenous vector as
-well as its expectations, $$e_t$$ and $$\Et \[\,e\tpk\] $$, $$k=1,2,\ldots$$,
+well as its expectations, $$e_t$$ and $$\Et [\,e\tpk] $$, $$k=1,2,\ldots$$,
 are known at time $$t$$. We, however, do not introduce any further
-assumptions about the law of motion for $$e_t$$, apart from a~stability
-requirement adopted from BK, condition \(1c\) on page~1305. Obviously, the
-first-order difference equation \eqref{Eq:RESystem} can easily accommodate
+assumptions about the law of motion for $$e_t$$, apart from a stability
+requirement adopted from BK, condition (1c) on page 1305. Obviously, the
+first-order difference equation $$\eqref{Model}$$ can easily accommodate
 systems with lags and leads higher than one by simply augmenting $$\xb_t$$
 and $$\xf_t$$ with auxiliary, time-shifted, variables.
 
@@ -96,25 +90,26 @@ $$
 \end{gather}
 $$
 
-where $\alpha_t$ is a suitable transformation of the vector of
-predetermined variables such that $\Ma$, and hence also the overall
+where $$\alpha_t$$ is a suitable transformation of the vector of
+predetermined variables such that $$\Ma$$, and hence also the overall
 transition matrix of the system, is upper triangular. Note that the
-expectations of endogenous variables, $\Et \[\xf_{t+1}\]$ translate, in
+expectations of endogenous variables, $$\Et [\xf_{t+1}]$$ translate, in
 general, into an infinite sum of expectations of exogenous processes, which
 are known by assumption.
 
 First, we take for granted that the system matrices $$A$$ and $$B$$ satisfy
-a~generalized saddle-path condition. In other words, they have exactly
-$\Nb$ generalized eigenvalues inside, or on, the unit circle \(called
-\textit{non-explosive}; recall that these also include unit roots\), and
-exactly $\Nf$ eigenvalues outside the unit circle \(called
-\textit{explosive}\).\footnote{See section 5.3.1 in Klein, and propositions
+a generalized saddle-path condition. In other words, they have exactly
+$$\Nb$$ generalized eigenvalues inside, or on, the unit circle (called
+__non-explosive__; recall that these also include unit roots), and
+exactly $$\Nf$$ eigenvalues outside the unit circle (called
+\textit{explosive}).\footnote{See section 5.3.1 in Klein, and propositions
 1 to 3 in BK.} Next, we can transform the vector of state variables and
-factorize the system \eqref{Eq:RESystem} using the Schur generalized
+factorize the system $$\eqref{Model}$$ using the Schur generalized
 decomposition as follows:
 
 $$
-\label{Eq:SchurTransform}
+\Et \begin{bmatrix} \xb_t \\ \xf\tp \end{bmatrix} = 
+Z \Et \begin{bmatrix} s\tp \\ u\tp \end{bmatrix},
 \quad \text{or} \quad 
 \begin{bmatrix} \xb\tm \\ \xf_t \end{bmatrix} = 
 Z \begin{bmatrix} s_t \\ u_t \end{bmatrix},
@@ -123,12 +118,12 @@ $$
 and
 
 $$
-\label{Eq:SchurSystem}
 S \Et \begin{bmatrix} s\tp \\ u\tp \end{bmatrix}
 + T \begin{bmatrix} s_t \\ u_t \end{bmatrix} + D \,e_t = 0,
+\tag{Schur-System}
 $$
 
-where $D = Q\, C$, and $S = Q A Z$ and $T = Q B Z$ are both upper triangular \(for complex Schur forms\) or quasi-triangular \(for real Schur forms\) matrices,\footnotemark and $Q$ and $Z$ are unitary matrices. The new matrices can be split into blocks conformably with $\Nb$ and $\Nf$, \footnotetext{By quasi-triangular we mean a matrix with $1\times 1$ and $2\times 2$ blocks along the main diagonal, depending on the occurrence of real and complex eigenvalues, and with zeros below it. Whether we perform a complex or real Schur decomposition irrelevant for constructing the solution. The choice affects only the computational efficiency of the procedure.}
+where $D = Q\, C$, and $S = Q A Z$ and $T = Q B Z$ are both upper triangular (for complex Schur forms) or quasi-triangular (for real Schur forms) matrices,\footnotemark and $Q$ and $Z$ are unitary matrices. The new matrices can be split into blocks conformably with $\Nb$ and $\Nf$, \footnotetext{By quasi-triangular we mean a matrix with $1\times 1$ and $2\times 2$ blocks along the main diagonal, depending on the occurrence of real and complex eigenvalues, and with zeros below it. Whether we perform a complex or real Schur decomposition irrelevant for constructing the solution. The choice affects only the computational efficiency of the procedure.}
 
 $$
 S = \begin{bmatrix} S_{11} & S_{12} \\ 0 & S_{22} \end{bmatrix}, \quad
@@ -142,17 +137,17 @@ and arranged so that the upper left blocks $S_{11}$ and $T_{11}$ contain only th
 The procedure now consists of four simple steps:
 
 1. solving the the lower, explosive, part of the transformed vector, $u_t$, using forward iterations;
-2. finding a transformation $\alpha_t$ of the predetermined vector, $\xb_t$,  such that it gives rise to a~triangular transition matrix;
+2. finding a transformation $\alpha_t$ of the predetermined vector, $\xb_t$,  such that it gives rise to a triangular transition matrix;
 3. solving for the upper, non-explosive, part of the transformed vector, $\alpha_t$, in recursive form;
 4. solving for the vector of forward-looking variables, $\xf_t$.
 
-First, we iterate the lower part of eq. \eqref{Eq:SchurSystem} forward and
+First, we iterate the lower part of eq. $$\eqref{Schur-System}$$ forward and
 get the following solution in which we retain the effect of all future
 expected residuals, 
 
 $$
 \label{Eq:UnstableSolution}
-u_t = F e_t + G \, F \, \Et \[ e\tp\] + G^2 F \, \Et \[ e_{t+2} \] + \cdots
+u_t = F e_t + G \, F \, \Et \[ e\tp] + G^2 F \, \Et \[ e_{t+2} ] + \cdots
 $$
 
 where
@@ -161,22 +156,22 @@ $$
 F = -(T_{22})^{-1} D_2, \quad G = -(T_{22})^{-1} S_{22},
 $$
 
-cf. eq. \(5.5\) in Klein (2000). For ease of notation, we introduce
-a~conditional expectations operator, $\(\fce_t\)^k e_t = \Et \[e_{t+k}\]$,
-and re-write \eqref{Eq:UnstableSolution} as a polynomial in $\fce_t$:
+cf. eq. (5.5) in Klein (2000). For ease of notation, we introduce
+a conditional expectations operator, $(\fce_t)^k e_t = \Et \[e_{t+k}]$,
+and re-write $$\eqref{Eq:UnstableSolution}$$ as a polynomial in $\fce_t$:
 
 $$
 \label{Eq:UnstableSolutionPoly}
 u_t = \left[ \sum\nolimits_{k=0}^\infty (G \,\fce_t)^k \right] F e_t .
 $$
 
-Second, we introduce $\alpha_t = \(Z_{11}\)^{-1} \xb_t$, and denote $U :=
-\(Z_{11}\)^{-1}$ for future reference. The new vector $\alpha_t$ is
+Second, we introduce $\alpha_t = (Z_{11})^{-1} \xb_t$, and denote $U :=
+(Z_{11})^{-1}$ for future reference. The new vector $\alpha_t$ is
 backward-looking, or predetermined, by construction. We will see shortly
 that this particular transformation leads to a triangularized transition
 matrix.
 
-Third, noting that from \eqref{Eq:SchurTranform}
+Third, noting that from $$\eqref{Eq:SchurTranform}$$
 
 $$
 \begin{gather}
@@ -185,21 +180,21 @@ $$
 s_t = \alpha_{t-1} - U Z_{12} \, u_t,
 $$
 
-we can re-write the upper part of eq.~\eqref{Eq:SchurSystem} as
+we can re-write the upper part of eq. $$\eqref{Eq:SchurSystem}$$ as
 
 $$
 S_{11} \alpha_t + (S_{12} - U Z_{12} )\,  \Et [ u\tp ] + T_{11} \alpha\tm + (T_{12} - U 
 Z_{12}) \, u_t + D_1 e_t = 0.
 $$
 
-After substituting for $u_t$ and $\Et \[ u\tp \] $ from \eqref{Eq:UnstableSolutionPoly}, we obtain the following process for $\alpha_t$:
+After substituting for $u_t$ and $\Et \[ u\tp ] $ from $$\eqref{Eq:UnstableSolutionPoly}$$, we obtain the following process for $\alpha_t$:
 
 $$
 \alpha_t = M_\alpha \, \alpha\tm + R_\alpha(\fce_t) \, e_t ,
 $$
 
-where $M_\alpha = -\(S_{11}\) T_{11}$ is upper triangular \(or
-quasi-triangular\) by construction, and the coefficient matrices $R_{\alpha
+where $M_\alpha = -(S_{11}) T_{11}$ is upper triangular (or
+quasi-triangular) by construction, and the coefficient matrices $R_{\alpha
 0}$, $R_{\alpha 1}$, $R_{\alpha 2}$, $\ldots$ of the infinite polynomial
 
 $$
@@ -221,7 +216,7 @@ $$
 We provide the formulas for the coefficient matrices below.
 
 Fourth, we solve for the vector of forward-looking variables, $\xf_t$.
-Using~ \eqref{Eq:SchurTranform}, we get
+Using  $$\eqref{Eq:SchurTranform}$$, we get
 
 $$
 \xf_t = Z_{21} s_t + Z_{22} u_t = Z_{21} \alpha_{t-1} + (Z_{22} - Z_{21} U Z_{12} )\, u_t.
@@ -237,7 +232,7 @@ $$
 \end{gather*}
 $$
 
-we can now summarise the resulting dynamics of the model \eqref{Eq:RESystem} as follows:
+we can now summarise the resulting dynamics of the model $$$$\eqref{Model}$$$$ as follows:
 
 $$
 \begin{gather}
@@ -256,7 +251,7 @@ M = \begin{bmatrix} 0 & \Mf \\ 0 & \Ma \end{bmatrix}, \quad \text{and} \quad
 R(\cdot) = \begin{bmatrix} \Rf(\phi_t) \\ R_\alpha(\phi_t) \end{bmatrix}.
 $$
 
-Finally, the coefficient matrices for the polynomial $R_\alpha\(\phi_t\)$ are
+Finally, the coefficient matrices for the polynomial $R_\alpha(\phi_t)$ are
 
 $$
 \begin{align*}
@@ -267,8 +262,10 @@ R_{\alpha,k} &= (H G + J) G^{k-1} F,
 \end{align*}
 $$
 
-where $H := \(S_{11}\)^{-1} \(T_{11} U Z_{12} - T_{12} \)$ and $J := \(S_{11}\)^{-1} \(S_{11} U Z_{12} -  
-S_{12} \)$, whereas the coefficient matrices for $\Rf\(\phi_t$\) are
+where $H := (S_{11})^{-1} (T_{11} U Z_{12} - T_{12} )$ 
+and 
+$J := (S_{11})^{-1} (S_{11} U Z_{12} -  S_{12} )$, whereas the coefficient
+matrices for $\Rf(\phi_t$) are
 
 $$
 R_{f,0} &= K F, \\
@@ -280,7 +277,7 @@ $$
 with $K := Z_{22} - Z_{21} U Z_{12} $.
 
 We have now completed the all matrices in the triangular
-solution~\eqref{Eq:SolutionOne}-\eqref{Eq:SolutionTwo}.
+solution $$\eqref{Eq:SolutionOne}-\eqref{Eq:SolutionTwo}$$.
 
 ## Simulations of Anticipated Shocks
 
