@@ -70,7 +70,7 @@ A \, \Et \begin{bmatrix} \xb_t \\ \xf\tp \end{bmatrix} + B \,
 \begin{bmatrix} \xb\tm \\ \xf_t\end{bmatrix} + C \,e_t = 0, \tag{Eq1}
 $$
 
-where $$\ref{Eq1}$$ an $$\Nx\times 1$$ vector of endogenous variables consists of $$\xb_t$$,
+where $$\eqref{Eq1}$$ an $$\Nx\times 1$$ vector of endogenous variables consists of $$\xb_t$$,
 an $$\Nb\times 1$$ vector of **predetermined**, or backward-looking,
 variables for which $$\Et \[ \xbt \] = \xb_t$$, with $$\xb\tm$$ being given,
 and $$\xf_t$$, an $$\Nf\times 1$$ vector of **non-predetermined**, or
