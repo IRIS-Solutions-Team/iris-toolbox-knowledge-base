@@ -50,6 +50,12 @@ We consider the following form of linear, linearized, or log-linearized
 rational-expectations models:
 
 $$
+\newcommand{\xb}{{x^b}}
+\newcommand{\xf}{{x^f}}
+\newcommand{\Nf}{{n_f}}
+\newcommand{\Ne}{{n_e}}
+\newcommand{\Nb}{{n_b}}
+\newcommand{\Nx}{{n_x}}
 \newcommand{\Rf}{{R_f}}
 \newcommand{\Ra}{{R_\alpha}}
 \newcommand{\Mf}{{M_f}}
@@ -59,8 +65,6 @@ $$
 \newcommand{\tpk}{{_{t+k}}}
 \newcommand{\tm}{{_{t-1}}}
 \newcommand{\Et}{\mathrm{E}_t}
-\newcommand{\xf}{{x^f}}
-\newcommand{\xb}{{x^b}}
 \label{Eq:RESystem}
 A \, \Et \begin{bmatrix} \xb_t \\ \xf\tp \end{bmatrix} + B \, 
 \begin{bmatrix} \xb\tm \\ \xf_t\end{bmatrix} + C \,e_t = 0,
