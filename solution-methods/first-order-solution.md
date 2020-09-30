@@ -1,12 +1,12 @@
 $$
-\newcommand{\Rf}{\ensuremath{R_f}}
-\newcommand{\Ra}{\ensuremath{R_\alpha}}
-\newcommand{\Mf}{\ensuremath{M_f}}
-\newcommand{\Ma}{\ensuremath{M_\alpha}}
-\newcommand{\fce}{\ensuremath{\phi}}
-\newcommand{\tp}{\ensuremath{_{t+1}}}
-\newcommand{\tpk}{\ensuremath{_{t+k}}}
-\newcommand{\tm}{\ensuremath{_{t-1}}}
+\newcommand{\Rf}{{R_f}}
+\newcommand{\Ra}{{R_\alpha}}
+\newcommand{\Mf}{{M_f}}
+\newcommand{\Ma}{{M_\alpha}}
+\newcommand{\fce}{{\phi}}
+\newcommand{\tp}{{_{t+1}}}
+\newcommand{\tpk}{{_{t+k}}}
+\newcommand{\tm}{{_{t-1}}}
 $$
 
 # First-Order Approximate Solution
