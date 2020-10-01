@@ -14,5 +14,6 @@
 
 ## Estimation
 
-* [Kalman Filter](kalman-filter.md)
-* [Adaptive Random-Walk Metropolis Posterior Simulator](arwm-posterior-simulator.md)
+* [Kalman Filter](estimation/kalman-filter.md)
+* [Adaptive Random-Walk Metropolis Posterior Simulator](estimation/adaptive-random-walk-metropolis-posterior-simulator.md)
+
