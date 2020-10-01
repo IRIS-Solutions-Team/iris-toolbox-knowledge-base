@@ -1,6 +1,5 @@
 
 # Efficient Triangular Solution to Rational-Expectations Models and Its Forward Expansion
-
 {% hint style="warning" %}
 You may need to refresh the page several times before math equations
 display correctly
