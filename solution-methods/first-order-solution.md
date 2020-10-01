@@ -16,9 +16,7 @@ The article is organized as follows. Section 2 explains the underlying assumptio
 
 ## Linear\(ized\) Model
 
-We use a version of the algorithm proposed by Klein \(2000\)\[^1\], which builds upon a generalized Schur \(also known as QZ\) decomposition when solving out for the expectations of endogenous variables. We though deviate from Klein in three important aspects:
-
-\[^1\]: XXX
+We use a version of the algorithm proposed by Klein \(2000\), which builds upon a generalized Schur \(also known as QZ\) decomposition when solving out for the expectations of endogenous variables. We though deviate from Klein in three important aspects:
 
 * We transform the vector of predetermined \(or backward-looking\) variables so as to give rise to a triangular transition matrix in the resulting solution.
 * We allow unit roots in the model and treat them correctly as _stable_, or _non-explosive_, roots from the point of view of saddle-path stability \(contrary to footnote 8 on page 1410 in Klein, there is nothing problematic about unit roots\).
