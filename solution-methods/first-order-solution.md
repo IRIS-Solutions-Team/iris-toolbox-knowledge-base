@@ -88,6 +88,7 @@ $$
 \newcommand{\tm}{_{t-1}}
 \newcommand{\Et}{\mathrm{E}_t}
 \tag{Model}
+\label{Model}
 A \, \Et \begin{bmatrix} \xb_t \\ \xf\tp \end{bmatrix} + B \, 
 \begin{bmatrix} \xb\tm \\ \xf_t\end{bmatrix} + C \,e_t = 0,
 $$
@@ -206,7 +207,6 @@ The new vector $$\alpha_t$$ is backward-looking, or predetermined, by constructi
 Third, noting that from $$\eqref{Transform}$$
 
 $$
-\tag{Triang_Transform}
 \Et [ s\tp ] = \alpha_t - U Z_{12} \, \Et [ u\tp ], \quad \text{or} \quad
 s_t = \alpha_{t-1} - U Z_{12} \, u_t,
 $$
