@@ -309,7 +309,7 @@ $$
 with $$K := Z_{22} - Z_{21} U Z_{12}$$.
 
 We have now completely described all matrices in the triangular
-solution $$\eqref{Solution}$$.
+$$\eqref{Solution}$$.
 
 
 ## Simulations of Anticipated Shocks
