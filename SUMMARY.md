@@ -4,7 +4,7 @@
 
 ## Solution Methods
 
-* [First-Order Approximate Solution](solution-methods/first-order-solution.markdown)
+* [First-Order Approximate Solution](solution-methods/first-order-solution.gh.md)
   * [zzzzz](solution-methods/zz.md)
     * [Untitled](solution-methods/aa.md)
 * [Stacked-Time Nonlinear Solver](solution-methods/stacked-time-solver.md)
