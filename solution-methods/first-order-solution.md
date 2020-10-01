@@ -1,6 +1,8 @@
 
 # Efficient Triangular Solution to Rational-Expectations Models and Its Forward Expansion
 
+**You may need to refresh the page several time before the math equations display correctly**
+
 > ### Summary
 > In this article, we show the algorithm implemented in the [IrisToolbox] for
 calculating a first-order approximate solution to rational-expectations
@@ -40,7 +42,7 @@ algorithm on an example unit-root model. Appendix 1 provides details of the
 solution algorithm.
 
 
-## The Model and Its Solution
+## Linear(ized) Model
 
 
 We use a version of the algorithm proposed by Klein (2000)[^1], which
@@ -65,8 +67,9 @@ specific process for them.
 In fact, in the last two aspects, we simply return to the very origins of
 solving RE models laid by Blanchard and Kahn (1980)[^2].
 
-[^1]: Klein (2000)
-[^2]: Blanchard and Kahn (1980)
+[^1]: Klein (2000): Using the Generalized Schur Form to Solve a Multivariate Linear Rational Expectations Model. Journal of Economic Dynamics and Control, 24(10):1405–23.
+
+[^2]: Blanchard and Kahn (1980): The Solution of Linear Difference Models under Rational Expectations. Econometrica, 48(5):1305–12.
 
 
 We consider the following form of linear, linearized, or log-linearized rational-expectations models:
