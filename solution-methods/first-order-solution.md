@@ -108,7 +108,7 @@ expectations operator.  The current realisation of the exogenous vector as
 well as its expectations, $$e_t$$ and $$\Et [\,e\tpk] $$, $$k=1,2,\ldots$$, are
 known at time $$t$$. We, however, do not introduce any further assumptions
 about the law of motion for $$e_t$$, apart from a stability requirement
-adopted from BK, condition (1c) on page 1305. Obviously, the first-order
+adopted from Blanchard and Kahn (1980), condition (1c) on page 1305. Obviously, the first-order
 difference equation $$\eqref{Model}$$ can easily accommodate systems with
 lags and leads higher than one by simply augmenting $$\xb_t$$ and $$\xf_t$$
 with auxiliary, time-shifted, variables.
@@ -199,7 +199,7 @@ $$
 F = -(T_{22})^{-1} D_2, \quad G = -(T_{22})^{-1} S_{22},
 $$
 
-cf. eq. (5.5) in Klein. For ease of notation, we introduce
+cf. eq. (5.5) in Klein (2000). For ease of notation, we introduce
 a conditional expectations operator, $$(\fce_t)^k e_t = \Et [ 
 e_{t+k}]$$, and re-write $$\eqref{Unstable}$$ as a polynomial in $$\fce_t$$:
 
