@@ -1,7 +1,9 @@
 
 # Efficient Triangular Solution to Rational-Expectations Models and Its Forward Expansion
 
-In this article, we show the algorithm implemented in the [IrisToolbox] for
+### Summary
+
+> In this article, we show the algorithm implemented in the [IrisToolbox] for
 calculating a first-order approximate solution to rational-expectations
 (RE) models such that its transition matrix is upper triangular. The
 algorithm is efficient in the sense that no extra matrix factorization is
