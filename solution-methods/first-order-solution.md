@@ -316,10 +316,9 @@ $$\eqref{Solution}$$.
 ## References
 
 
-[^1]: Klein (2000). Using the Generalized Schur Form to Solve a
-  Multivariate Linear Rational Expectations Model. Journal of Economic
-  Dynamics and Control, 24(10):1405–23.
+[^1]:
+Klein (2000). Using the Generalized Schur Form to Solve a Multivariate Linear Rational Expectations Model. Journal of Economic Dynamics and Control, 24(10):1405–23.
 
-[^2]: Blanchard and Kahn (1980). The Solution of Linear Difference Models
-  under Rational Expectations. Econometrica, 48(5):1305–12.
+[^2]:
+Blanchard and Kahn (1980). The Solution of Linear Difference Models under Rational Expectations. Econometrica, 48(5):1305–12.
 
