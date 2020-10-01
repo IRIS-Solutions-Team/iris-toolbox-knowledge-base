@@ -1,5 +1,6 @@
 
 # Efficient Triangular Solution to Rational-Expectations Models and Its Forward Expansion
+
 {% hint style="warning" %}
 You may need to refresh the page several times before math equations
 display correctly
@@ -44,7 +45,7 @@ algorithm on an example unit-root model. Appendix 1 provides details of the
 solution algorithm.
 
 
-## The Model and Its Solution
+## Linear(ized) Model
 
 
 We use a version of the algorithm proposed by Klein (2000)[^1], which
@@ -111,7 +112,9 @@ difference equation $$\eqref{Model}$$ can easily accommodate systems with
 lags and leads higher than one by simply augmenting $$\xb_t$$ and $$\xf_t$$
 with auxiliary, time-shifted, variables.
 
-In the rest of this section, we construct a solution that has the following form:
+## Solution
+
+We construct a solution that has the following form:
 
 $$
 \tag{Solution}
@@ -288,8 +291,10 @@ M = \begin{bmatrix} 0 & \Mf \\ 0 & \Ma \end{bmatrix}, \quad \text{and} \quad
 R(\cdot) = \begin{bmatrix} \Rf(\phi_t) \\ R_\alpha(\phi_t) \end{bmatrix}.
 $$
 
+## Details of Coefficient Matrices
 
-Finally, the coefficient matrices for the polynomial $$R_\alpha(\phi_t)$$ are
+The coefficient matrices for the polynomial $$R_\alpha(\phi_t)$$ are given
+by
 
 $$
 R_{\alpha,0} = - S_{11}^{-1} D_1 + H F, \\
@@ -314,7 +319,9 @@ We have now completely described all matrices in the triangular
 $$\eqref{Solution}$$.
 
 
-## Simulations of Anticipated Shocks
+## Simulations with Anticipated Shocks
+
+To be completed
 
 
 ## References
