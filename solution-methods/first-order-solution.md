@@ -1,6 +1,11 @@
 
 # Efficient Triangular Solution to Rational-Expectations Models and Its Forward Expansion
 
+{% hint style="warning" %}
+You may need to refresh the page several times before math equations
+display correctly
+{% endhint %}
+
 > ### Summary
 > In this article, we show the algorithm implemented in the [IrisToolbox] for
 calculating a first-order approximate solution to rational-expectations
@@ -315,10 +320,9 @@ $$\eqref{Solution}$$.
 
 ## References
 
+[^2]:
+Blanchard and Kahn (1980). The Solution of Linear Difference Models under Rational Expectations. Econometrica, 48(5):1305–12.
 
 [^1]:
 Klein (2000). Using the Generalized Schur Form to Solve a Multivariate Linear Rational Expectations Model. Journal of Economic Dynamics and Control, 24(10):1405–23.
-
-[^2]:
-Blanchard and Kahn (1980). The Solution of Linear Difference Models under Rational Expectations. Econometrica, 48(5):1305–12.
 
