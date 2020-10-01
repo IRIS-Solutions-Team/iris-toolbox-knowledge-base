@@ -94,9 +94,9 @@ $$
 
 
 where an $$\Nx\times 1$$ vector of endogenous variables consists of $$\xb_t$$,
-an $$\Nb\times 1$$ vector of \emph{predetermined}, or backward-looking,
+an $$\Nb\times 1$$ vector of _predetermined_, or backward-looking,
 variables for which $$\Et [ \xb_t ] = \xb_t$$, with $$\xb\tm$$ being given, and
-$$\xf_t$$, an $$\Nf\times 1$$ vector of \emph{non-predetermined}, or
+$$\xf_t$$, an $$\Nf\times 1$$ vector of _non-predetermined_, or
 forward-looking, variables. Futhermore, $$e_t$$ is an $$\Ne \times 1$$ vector
 of exogenous processes, and $$\Et[\cdot]$$ is a time $$t$$ conditional
 expectations operator.  The current realisation of the exogenous vector as
