@@ -113,6 +113,7 @@ In the rest of this section, we construct a solution that has the following form
 
 $$
 \tag{Solution}
+\label{Solution}
 \begin{bmatrix} \xf_t \\ \alpha_t \end{bmatrix}
 = \begin{bmatrix} 0 & \Mf \\ 0 & \Ma \end{bmatrix}
 \begin{bmatrix} \xf_{t-1} \\ \alpha_{t-1} \end{bmatrix} + R_0 \, e_t + R_1 \Et [e_{t+1}] + \cdots  R_k \Et [e_{t+k}], \\
@@ -138,6 +139,7 @@ follows:
 
 $$
 \tag{Transform}
+\label{Transform}
 \Et \begin{bmatrix} \xb_t \\ \xf\tp \end{bmatrix} = 
 Z \, \Et \begin{bmatrix} s\tp \\ u\tp \end{bmatrix},
 \quad \text{or} \quad 
@@ -149,6 +151,7 @@ and
 
 $$
 \tag{Schur}
+\label{Schur}
 S \, \Et \begin{bmatrix} s\tp \\ u\tp \end{bmatrix}
 + T \begin{bmatrix} s_t \\ u_t \end{bmatrix} + D \,e_t = 0,
 $$
@@ -182,6 +185,7 @@ following solution in which we retain the effect of all future expected residual
 
 $$
 \tag{Unstable}
+\label{Unstable}
 u_t = F e_t + G \, F \, \Et [ e\tp] + G^2 F \, \Et [ e_{t+2} ] + \cdots
 $$
 
@@ -197,6 +201,7 @@ e_{t+k}]$$, and re-write $$\eqref{Unstable}$$ as a polynomial in $$\fce_t$$:
 
 $$
 \tag{UnstablePolyn}
+\label{UnstablePolyn}
 u_t = \left[ \sum\nolimits_{k=0}^\infty (G \,\fce_t)^k \right] F e_t .
 $$
 
