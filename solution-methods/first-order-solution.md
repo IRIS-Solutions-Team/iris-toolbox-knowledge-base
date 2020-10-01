@@ -52,9 +52,9 @@ predetermined (or backward-looking) variables so as to give rise to a
 triangular transition matrix in the resulting solution. 
 
 * We allow
-unit roots in the model (and treat them correctly as _stable_, or
+unit roots in the model and treat them correctly as _stable_, or
 _non-explosive_, roots from the point of view of saddle-path
-stability) (contrary to footnote 8 on page 1410 in Klein, there is
+stability (contrary to footnote 8 on page 1410 in Klein, there is
 nothing problematic about unit roots). 
 
 * We provide explicit formulas for
@@ -136,7 +136,7 @@ the system $$\eqref{Model}$$ using the Schur generalized decomposition as
 follows:
 
 $$
-\tag{Schur_tranform}
+\tag{Transform}
 \Et \begin{bmatrix} \xb_t \\ \xf\tp \end{bmatrix} = 
 Z \, \Et \begin{bmatrix} s\tp \\ u\tp \end{bmatrix},
 \quad \text{or} \quad 
@@ -147,7 +147,7 @@ $$
 and
 
 $$
-\tag{Schur_system}
+\tag{Schur}
 S \, \Et \begin{bmatrix} s\tp \\ u\tp \end{bmatrix}
 + T \begin{bmatrix} s_t \\ u_t \end{bmatrix} + D \,e_t = 0,
 $$
@@ -176,11 +176,11 @@ The procedure now consists of four simple steps:
 vector, $$\alpha_t$$, in recursive form;
 1. solving for the vector of forward-looking variables, $$\xf_t$$.
 
-First, we iterate the lower part of eq. $$\eqref{Schur_system}$$ forward and get the 
+First, we iterate the lower part of eq. $$\eqref{Schur}$$ forward and get the 
 following solution in which we retain the effect of all future expected residuals,
 
 $$
-\tag{Unstable_solution}
+\tag{Unstable}
 u_t = F e_t + G \, F \, \Et [ e\tp] + G^2 F \, \Et [ e_{t+2} ] + \cdots
 $$
 
@@ -192,10 +192,10 @@ $$
 
 cf. eq. (5.5) in Klein. For ease of notation, we introduce
 a conditional expectations operator, $$(\fce_t)^k e_t = \Et [ 
-e_{t+k}]$$, and re-write $$\eqref{Unstable_solution}$$ as a polynomial in $$\fce_t$$:
+e_{t+k}]$$, and re-write $$\eqref{Unstable}$$ as a polynomial in $$\fce_t$$:
 
 $$
-\tag{Unstable_solution_poly}
+\tag{UnstablePolyn}
 u_t = \left[ \sum\nolimits_{k=0}^\infty (G \,\fce_t)^k \right] F e_t .
 $$
 
@@ -203,7 +203,7 @@ $$
 Second, we introduce $$\alpha_t = (Z_{11})^{-1} \xb_t$$, and denote $$U := (Z_{11})^{-1}$$ for future reference.
 The new vector $$\alpha_t$$ is backward-looking, or predetermined, by construction. We will see shortly that this particular transformation leads to a triangularized transition matrix.
 
-Third, noting that from $$\eqref{Schur_tranform}$$
+Third, noting that from $$\eqref{Transform}$$
 
 $$
 \tag{Triang_Transform}
@@ -211,14 +211,14 @@ $$
 s_t = \alpha_{t-1} - U Z_{12} \, u_t,
 $$
 
-we can re-write the upper part of eq. $$\eqref{Schur_system}$$ as
+we can re-write the upper part of eq. $$\eqref{Schur}$$ as
 
 $$
 S_{11} \alpha_t + (S_{12} - U Z_{12} )\,  \Et [ u\tp ] + T_{11} \alpha\tm + (T_{12} - U 
 Z_{12}) \, u_t + D_1 e_t = 0.
 $$
 
-After substituting for $$u_t$$ and $$\Et [ u\tp ] $$ from $$\eqref{Unstable_solution_poly}$$, we 
+After substituting for $$u_t$$ and $$\Et [ u\tp ] $$ from $$\eqref{UnstablePolyn}$$, we 
 obtain the following process for $$\alpha_t$$:
 
 $$
@@ -249,7 +249,7 @@ $$
 We provide the formulas for the coefficient matrices below.
 
 Fourth, we solve for the vector of forward-looking variables, $$\xf_t$$. Using 
-$$\eqref{Schur_tranform}$$, we get
+$$\eqref{Transform}$$, we get
 
 $$
 \xf_t = Z_{21} s_t + Z_{22} u_t = Z_{21} \alpha_{t-1} + (Z_{22} - Z_{21} U Z_{12} )\, u_t.
