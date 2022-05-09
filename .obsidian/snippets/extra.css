@@ -1,0 +1,61 @@
+.markdown-preview-view {
+    font-family: "Open Sans";
+}
+
+.markdown-preview-view h1, .markdown-preview-view h2 {
+    color: #135C2A;
+}
+
+.markdown-source-view {
+    font-family: "Codelia Ligatures Dotted Zero";
+}
+
+.markdown-preview-view .markdown-embed-content > .markdown-preview-view {
+    max-height: none;
+}
+
+.markdown-preview-view .markdown-embed {
+    border-width: 0px;
+    margin: 0px;
+    padding: 0px;
+}
+
+.markdown-embed .markdown-preview-view {
+    padding: 0px;
+}
+
+.markdown-embed-title, .markdown-embed-link {
+    display: none;
+}
+
+code:not([class*='language-']) {
+    font-family: "Codelia Ligatures Dotted Zero" !important;
+}
+
+:root {
+    --reveal-font: "Fira Sans";
+}
+
+.reveal h1 {
+    text-transform: none;
+}
+
+.outline .tree-item .tree-item-children .tree-item .tree-item-children {
+    display: none;
+}
+
+@media print {
+    .markdown-preview-view hr {
+        page-break-after: always;
+        visibility: hidden;
+    }
+}
+
+@media screen {
+    .markdown-preview-view hr {
+        margin-top: 700px;
+        visibility: hidden;
+    }
+}
+
+

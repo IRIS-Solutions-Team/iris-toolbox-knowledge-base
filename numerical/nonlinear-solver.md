@@ -1,4 +1,4 @@
-## [IrisToolbox] for Macroeconomic Modeling
+__[IrisToolbox] for Macroeconomic Modeling__
 
 # Nonlinear Equations Solver
 

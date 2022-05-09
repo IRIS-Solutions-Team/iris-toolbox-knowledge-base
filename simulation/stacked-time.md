@@ -1,5 +1,5 @@
 
-## [IrisToolbox] for Macroeconomic Modeling
+__[IrisToolbox] for Macroeconomic Modeling__
 
 # Stacked time solution method with first-order terminal condition
 

@@ -1,5 +1,5 @@
 
-## [IrisToolbox] for Macroeconomic Modeling
+__[IrisToolbox] for Macroeconomic Modeling__
 
 # Adaptive Random-Walk Metropolis (ARWM) Posterior Simulator
 
@@ -7,7 +7,7 @@
 
 ---
 
-# Initialization
+## Initialization
 
 Initial vector of parameters $\theta_0$ `poster.InitParam`
 
@@ -20,7 +20,7 @@ Factorize $\Sigma_0 = P_0 P_0'$
 
 ---
 
-# Burn-in
+## Burn-in
 
 Run a total $N_\mathrm{burn} + N$
 
@@ -34,7 +34,7 @@ Discard $N_\mathrm{burn}$
 
 ---
 
-# *n*-th proposal
+## *n*-th proposal
 
 $$
 \hat \theta_n = \theta_{n-1} + w_n = \theta_{n-1} + \sigma_{n-1} \, P_{n-1} \, u_n
@@ -49,7 +49,7 @@ $$
 
 ---
 
-# Acceptance or rejection
+## Acceptance or rejection
 
 Accept $\hat \theta_n$ with probability $\alpha_n$
 
@@ -64,7 +64,7 @@ If rejected ($a_n=0$): $\theta_n = \theta_{n-1}$
 
 ---
 
-# Adaptation to target acceptance ratio
+## Adaptation to target acceptance ratio
 
 Adapt the scale and shape of the proposal covariance matrix to force acceptance ratio towards target $\alpha^*$
 
@@ -84,7 +84,7 @@ Adaptation needs to be vanishing to preserve ergodicity
 
 ---
 
-# Scale adaptation
+## Scale adaptation
 
 For $n \le \overline n_\mathrm{adapt}:$
 
@@ -99,7 +99,7 @@ $$
 
 --- 
 
-# Shape adaptation
+## Shape adaptation
 
 For $n \le \overline n_\mathrm{adapt}$:
 
@@ -113,7 +113,7 @@ $$
 
 ---
 
-# Output arguments for diagnostics
+## Output arguments for diagnostics
 
 Chain of log posteriors $\mathit{poster}\left(\theta_n\right)$
 

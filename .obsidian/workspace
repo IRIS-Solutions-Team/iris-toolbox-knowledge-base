@@ -1,0 +1,113 @@
+{
+  "main": {
+    "id": "34bf1baaf9055f55",
+    "type": "split",
+    "children": [
+      {
+        "id": "d8243de28ae8cac2",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "model-source-language/preparser.md",
+            "mode": "source",
+            "source": true
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "e38e484159054bf4",
+    "type": "split",
+    "children": [
+      {
+        "id": "4cc48546da2d5500",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "77e33e067dd99f66",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "6c8d236be778cd9e",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "e632e7af4c20bb9c",
+    "type": "split",
+    "children": [
+      {
+        "id": "ab45d0e83098e835",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "d559e557fec24dcc",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "model-source-language/preparser.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "61f7313970181f87",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "model-source-language/preparser.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "d8243de28ae8cac2",
+  "lastOpenFiles": [
+    "model-source-language/preparser.md",
+    "model-source-language/main-keywords.md",
+    "numerical/nonlinear-solver.md",
+    "bayesian/posterior-simulator.md",
+    "bayesian/system-priors.md",
+    "overview/functional-areas.md",
+    "simulation/first-order-solution.md",
+    "simulation/intro-nonlinear.md",
+    "simulation/practical.md",
+    "simulation/stacked-time.md"
+  ]
+}

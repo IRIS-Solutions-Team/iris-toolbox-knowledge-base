@@ -1,5 +1,5 @@
 	
-## [IrisToolbox] for Macroeconomic Modeling
+__[IrisToolbox] for Macroeconomic Modeling__
 
 # Simulating nonlinear models
 
