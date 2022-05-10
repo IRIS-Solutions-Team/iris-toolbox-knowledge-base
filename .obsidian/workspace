@@ -4,16 +4,30 @@
     "type": "split",
     "children": [
       {
-        "id": "d8243de28ae8cac2",
+        "id": "07da69f707c5bdea",
         "type": "leaf",
+        "dimension": 78.21350762527233,
         "state": {
           "type": "markdown",
           "state": {
-            "file": "model-source-language/preparser.md",
-            "mode": "source",
+            "file": "simulation/intro-linearized.md",
+            "mode": "preview",
             "source": true
           }
-        }
+        },
+        "group": "ccb90e7a0dcf8cc1"
+      },
+      {
+        "id": "1c4b575380ac5989",
+        "type": "leaf",
+        "dimension": 21.78649237472767,
+        "state": {
+          "type": "outline",
+          "state": {
+            "file": "simulation/intro-linearized.md"
+          }
+        },
+        "group": "ccb90e7a0dcf8cc1"
       }
     ],
     "direction": "vertical"
@@ -69,7 +83,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "model-source-language/preparser.md",
+                "file": "simulation/intro-linearized.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -86,7 +100,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "model-source-language/preparser.md"
+                "file": "simulation/intro-linearized.md"
               }
             }
           }
@@ -94,20 +108,20 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
+    "width": 100,
     "collapsed": true
   },
-  "active": "d8243de28ae8cac2",
+  "active": "07da69f707c5bdea",
   "lastOpenFiles": [
-    "model-source-language/preparser.md",
-    "model-source-language/main-keywords.md",
-    "numerical/nonlinear-solver.md",
-    "bayesian/posterior-simulator.md",
-    "bayesian/system-priors.md",
-    "overview/functional-areas.md",
+    "simulation/intro-linearized.md",
     "simulation/first-order-solution.md",
+    "simulation/multiple-frames.png",
+    "overview/functional-areas.md",
     "simulation/intro-nonlinear.md",
-    "simulation/practical.md",
-    "simulation/stacked-time.md"
+    "simulation/intro-nonlinear.pdf",
+    "model-source-language/main-keywords.md",
+    "time-series-modeling/overfitting.md",
+    "model-source-language/preparser.md",
+    "numerical/nonlinear-solver.md"
   ]
 }

@@ -11,5 +11,6 @@
   "livePreview": false,
   "showLineNumber": true,
   "autoPairMarkdown": false,
-  "foldHeading": false
+  "foldHeading": false,
+  "autoPairBrackets": false
 }

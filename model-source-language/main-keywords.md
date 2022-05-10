@@ -12,7 +12,7 @@ __[IrisToolbox] for Macroeconomic Modeling__
 
 * At least one transition equation and one transition variable
 
-* Although possible, refrain from hardcoding paramete values
+* Although possible, refrain from hardcoding parameter values
 
 * Model source code is meant to describe the model 
 
