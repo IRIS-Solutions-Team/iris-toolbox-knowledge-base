@@ -26,7 +26,7 @@ __[IrisToolbox] for Macroeconomic Modeling__
 
 * Detection of sparse Jacobian pattern
 
-* Detection of invariant Jacobian elements
+* Detection of simulation-invariant Jacobian elements
 
 
 ---
@@ -37,14 +37,13 @@ __[IrisToolbox] for Macroeconomic Modeling__
 
 * Robustness
 
-* Underdetermined systems, aka singularity in Jacobian: critical for growth
-  models
+* Underdetermined systems, aka singularity in Jacobian: critical for growth models  
 
 ---
 
 ## Curse of dimensionality in stacked-time simulations
 
-Dimension of the problem: $K =$ number of equations $\times$ number of periods
+Dimension of the problem: $K =$ # equations $\times$ # periods
 
 Dimensions of the Jacobian: $K \times K$
 
@@ -57,7 +56,7 @@ Reduce the actual dimensionality and accelerate:
 * Base terminal condition upon the first order solution dramatically
 reduces the number of periods needed
 
-* Detect the sparse Jacobian pattern to avoid zero points
+* Detect the sparse Jacobian pattern to avoid the evaluation of zero points
 
 * Detect the Jacobian elements that need to be evaluated only once (at the beginning)
 
@@ -66,10 +65,7 @@ reduces the number of periods needed
 ## QNSD algorithm
 
 
-Quasi-Newton-steepest-descent where the Jacobian is regularized using the steepest descent
-method for underdetermined systems (steady state solver for growth models
-with "independent" degrees of freedeom, or steady state solver with
-the ```"fixLevel"``` option)
+Quasi-Newton-steepest-descent where the Jacobian is regularized using the steepest descent method for underdetermined systems (steady state solver for growth models with "independent" degrees of freedeom)
 
 $$
 \begin{gathered}
@@ -114,14 +110,14 @@ where
     "startIter",    "firstOrder" | "data", ...
     "successOnly",  false | true, ...
     "window",       @auto | numeric, ...
-    "solver",       @auto | {"iris-newton", ...}, ...
+    "solver",       @auto | {...}, ...
 );
 ```
 
 The `solver` options:
 
 ```
-{ "iris-newton", ...
+{ solverName, ...
     "skipJacobUpdate",          0 | numeric, ...
     "lastJacobUpdate",          Inf | numeric, ...
     "functionNorm",             2 | Inf, ...
@@ -132,3 +128,8 @@ The `solver` options:
 }
 ```
 
+Solver names:
+
+```
+solverName = "newton" | "quickNewton" | "qnsd"
+```

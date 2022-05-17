@@ -1,7 +1,7 @@
 
 __[IrisToolbox] for Macroeconomic Modeling__
 
-# First-order solution 
+# Steady-state and first-order solution 
 
 `jaromir.benes@iris-toolbox.com`
 
@@ -177,7 +177,7 @@ $$
 
 <br/>
 
-Transformed vector of predermined (backward looking) variables
+Transformed vector of predetermined (backward looking) variables
 
 $$
 \xi_{b,t} = U \, \alpha_t
@@ -194,7 +194,7 @@ $$
 
 ---
 
-## Triangular transition matrix $T_b$
+## Triangular transition matrix $T_\alpha$
 
 * Upper (block) triangular (1-by-1 or 2-by-2 blocks on the main diagonal)
 

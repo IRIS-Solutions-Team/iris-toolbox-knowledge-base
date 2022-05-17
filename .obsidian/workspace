@@ -4,30 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "07da69f707c5bdea",
+        "id": "f895c3a59dc8e68e",
         "type": "leaf",
-        "dimension": 78.21350762527233,
         "state": {
           "type": "markdown",
           "state": {
-            "file": "simulation/intro-linearized.md",
+            "file": "numerical/kalman-filter.md",
             "mode": "preview",
             "source": true
           }
-        },
-        "group": "ccb90e7a0dcf8cc1"
-      },
-      {
-        "id": "1c4b575380ac5989",
-        "type": "leaf",
-        "dimension": 21.78649237472767,
-        "state": {
-          "type": "outline",
-          "state": {
-            "file": "simulation/intro-linearized.md"
-          }
-        },
-        "group": "ccb90e7a0dcf8cc1"
+        }
       }
     ],
     "direction": "vertical"
@@ -67,7 +53,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 296.0068016052246
   },
   "right": {
     "id": "e632e7af4c20bb9c",
@@ -83,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "simulation/intro-linearized.md",
+                "file": "numerical/kalman-filter.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -100,7 +86,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "simulation/intro-linearized.md"
+                "file": "numerical/kalman-filter.md"
               }
             }
           }
@@ -111,17 +97,17 @@
     "width": 100,
     "collapsed": true
   },
-  "active": "07da69f707c5bdea",
+  "active": "f895c3a59dc8e68e",
   "lastOpenFiles": [
-    "simulation/intro-linearized.md",
+    "numerical/kalman-filter.md",
+    "numerical/nonlinear-solver.md",
     "simulation/first-order-solution.md",
-    "simulation/multiple-frames.png",
-    "overview/functional-areas.md",
+    "simulation/practical-nonlinear.md",
+    "simulation/practical.pdf",
     "simulation/intro-nonlinear.md",
+    "simulation/stacked-time.md",
+    "simulation/intro-linearized.md",
     "simulation/intro-nonlinear.pdf",
-    "model-source-language/main-keywords.md",
-    "time-series-modeling/overfitting.md",
-    "model-source-language/preparser.md",
-    "numerical/nonlinear-solver.md"
+    "simulation/multiple-frames.png"
   ]
 }

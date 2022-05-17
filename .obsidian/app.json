@@ -12,5 +12,6 @@
   "showLineNumber": true,
   "autoPairMarkdown": false,
   "foldHeading": false,
-  "autoPairBrackets": false
+  "autoPairBrackets": false,
+  "foldIndent": false
 }
