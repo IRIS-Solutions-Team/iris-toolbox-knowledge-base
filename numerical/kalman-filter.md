@@ -45,25 +45,23 @@ Observations of variables $\to$ the most likely combination of initial condition
 
 ## State space system
 
-$$
-t = 1, \dots, T
-$$
 
+Run for $t = 1, \dots, T$:
+
+###### Transition equations: Dynamics
 $$
 x_t = T \, x_{t-1} + k + R \, e_t
 $$
 
+<br/>
+
+###### Measurement equations: Static transformation
 $$
 y_t = Z \, x_t + d + H \, u_t
 $$
 
-$$
-\Sigma_x = R \, \mathrm E\!\left[ e \, e' \right] \, R'
-$$
 
-$$
-\Sigma_y = H \, \mathrm E\!\left[ u \, u' \right] \, H'
-$$
+
 
 ---
 
@@ -95,28 +93,24 @@ The Kalman filter algorithm itself does not specify how to come up with the init
 
 ## Prediction step
 
+<br/>
+
 ###### Prediction step for transition variables
 
 $$
-x_{1|0} = T \, x_{0|0} + k
-$$
-
-$$
-e_{1|0} = 0
+x_{1|0} = T \, x_{0|0} + k + R \, 0
 $$
 
 $$
 P_{1|0} = T \, P_{0|0} \, T' + R \, \Omega \, R'
 $$
 
+<br/>
+
 ###### Prediction step for measurement variables
 
 $$
-y_{1|0} = Z \, x_{1|0} + d
-$$
-
-$$
-u_{1|0} = 0
+y_{1|0} = Z \, x_{1|0} + d + H \, 0= Z \left( T\, \C{x_{0|0}} + k + R \, \C{0}\right) + d + H\,\C{0}
 $$
 
 $$
@@ -124,6 +118,13 @@ F_1 = MSE_0\!\left[y_1\right]
 = Z \, P_{1|0} \, Z' + \Sigma_{x,t}
 = Z \, \left( T \, \C{P_{0|0}} \, T' + \C{\Sigma_{x,t}} \right) \, Z' + \C{\Sigma_{y,t}}
 $$
+
+
+<br/>
+
+
+where  $\quad \Sigma_x = R \, \mathrm E\!\left[ e \, e' \right] \, R', \quad \Sigma_y = H \, \mathrm E\!\left[ u \, u' \right] \, H'$
+
 
 ---
 
@@ -146,6 +147,19 @@ $$
 > * Measurement errors in current period $u_{1|1} \ne 0$
 
 * Infinitely many combinations $\to$ find the likelihood maximizing combination
+
+---
+
+## Logic of the prediction and updating steps
+
+<br/>
+
+![[kalman-filter.png]]
+
+
+---
+
+## Conditioning problem in updating step
 
 * Equivalent to the conditional normal distribution formulas
 

@@ -4,7 +4,7 @@
     "type": "split",
     "children": [
       {
-        "id": "f895c3a59dc8e68e",
+        "id": "9db8825288e8ad5d",
         "type": "leaf",
         "state": {
           "type": "markdown",
@@ -97,7 +97,7 @@
     "width": 100,
     "collapsed": true
   },
-  "active": "f895c3a59dc8e68e",
+  "active": "9db8825288e8ad5d",
   "lastOpenFiles": [
     "numerical/kalman-filter.md",
     "numerical/nonlinear-solver.md",
