@@ -142,7 +142,7 @@ where  $\quad \Sigma_x = R \, \mathrm E\!\left[ e \, e' \right] \, R', \quad \Si
 
 * Reconcile your prediction with the observation by changing whatever can be changed that shaped our prediction, i.e. whatever is stochastic and not fixed
 
-> * State in previous period (initial conditoin) $x_{0|1} \ne x_{0|0}$
+> * State in previous period (initial condition) $x_{0|1} \ne x_{0|0}$
 > * Transition shocks in current period $e_{1|1} \ne 0$
 > * Measurement errors in current period $u_{1|1} \ne 0$
 
@@ -239,7 +239,7 @@ $$
 * Prediction error decomposition approach to likelihood function evaluation
 
 $$
-\mathcal L \propto \sum_{t=1}^{T}\ \nu_t{}' \, F_t{}^{-1} \, \nu_t
+\log \mathcal L \propto - \sum_{t=1}^{T}\ \nu_t{}' \, F_t{}^{-1} \, \nu_t
 $$
 
 * Allows to break the overall likelihood into the contributions of individual periods

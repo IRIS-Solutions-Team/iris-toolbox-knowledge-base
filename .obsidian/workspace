@@ -4,13 +4,13 @@
     "type": "split",
     "children": [
       {
-        "id": "9db8825288e8ad5d",
+        "id": "1b2ebaaf3943e12e",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "numerical/kalman-filter.md",
-            "mode": "preview",
+            "file": "internal/progress-2022Q2.md",
+            "mode": "source",
             "source": true
           }
         }
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "numerical/kalman-filter.md",
+                "file": "internal/progress-2022Q2.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -86,7 +86,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "numerical/kalman-filter.md"
+                "file": "internal/progress-2022Q2.md"
               }
             }
           }
@@ -97,17 +97,17 @@
     "width": 100,
     "collapsed": true
   },
-  "active": "9db8825288e8ad5d",
+  "active": "1b2ebaaf3943e12e",
   "lastOpenFiles": [
-    "numerical/kalman-filter.md",
-    "numerical/nonlinear-solver.md",
+    "internal/progress-2022Q2.md",
+    "model-source-language/main-keywords.md",
+    "overview/functional-areas.md",
+    "Untitled.md",
+    "assets/functional-areas.png",
     "simulation/first-order-solution.md",
-    "simulation/practical-nonlinear.md",
-    "simulation/practical.pdf",
-    "simulation/intro-nonlinear.md",
+    "Untitled 2.md",
+    "Untitled 1.md",
     "simulation/stacked-time.md",
-    "simulation/intro-linearized.md",
-    "simulation/intro-nonlinear.pdf",
-    "simulation/multiple-frames.png"
+    "bayesian/xxx.md"
   ]
 }

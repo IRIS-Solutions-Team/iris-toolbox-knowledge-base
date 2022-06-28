@@ -1,15 +1,11 @@
 
 __[IrisToolbox] for Macroeconomic Modeling__
 
-# Functional areas of Iris Toolbox
+# Key functional areas 
 
 `jaromir.benes@iris-toolbox.com`
 
 ---
-
-## Four main functional areas
-
-<br/>
 
 ![[../assets/functional-areas.png]]
 
@@ -28,7 +24,7 @@ Developing and operating systems of structured equations
 
 * Simulation plans: `Plan`
 
-* General state space: `LinearSystem`, `iris.mixin.Kalman`
+* General state space: `LinearSystem`
 
 * Bayesian estimation: `+distribution`, `Posterior`, `SystemProperty`, `SystemPrior`
 
@@ -39,13 +35,15 @@ Developing and operating systems of structured equations
 
 Explore shorter-term empirical correlations, deal with the overfitting problem in high-dimensional models
 
-* Reduced-form vector autoregressions: `VAR`, `+dummy`
+* Reduced-form vector autoregressions: `VAR`
 
 * Structural vector autoregressions: `SVAR`
 
+* Prior dummy observations for "bayesian" VARs: `+dummy`
+
 * Dynamic factor models: `Dynafit`
 
-* Interface to `X13-Arima-Tramo-Seats`
+* Interface to `X13-Arima-Tramo-Seats`: `x13.season`
 
 * Univariate filters for time series objects
 
@@ -59,9 +57,9 @@ Preprocess and postprocess time series and databanks (structs)
 
 * Time series: `Series`
 
-* Databanks: structs or `Dictionary`, `+databank`
+* Databanks: `+databank`
 
-* Interface to public APIs: IMF, ECB, Fred
+* Interface to public database APIs: IMF, ECB, Fred
 
 
 ---

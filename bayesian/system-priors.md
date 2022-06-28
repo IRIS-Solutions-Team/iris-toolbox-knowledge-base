@@ -73,7 +73,7 @@ p\left(\theta \mid m \right) =
 p_1\left(\theta_1 \mid m \right)
 \times \cdots \times
 p_n\left(\theta_n \mid m \right)
-\times
+\times  
 {\color{highlight}
 q_1\bigl(h(\theta)\mid m\bigr)
 \times \cdots \times
