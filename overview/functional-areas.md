@@ -12,34 +12,37 @@ __[IrisToolbox] for Macroeconomic Modeling__
 
 ---
 
-## Structural modeling
+## Overview of structural modeling tools
 
-Developing and operating systems of structured equations
+Develop and operate systems of structured equations
 
-* Model source language, model source preparser
+* Structural models: `Model` objects
 
-* Structural models: `Model`
+* Systems of explanatory equations: `Explanatory` objects
 
-* Systems of explanatory equations: `Explanatory`
+* IrisT source language and preparser for writing model source codes
 
-* Simulation plans: `Plan`
+* Simulation plans, conditioning, and model inversions: `Plan` objects
 
-* General state space: `LinearSystem`
+* General time-varying state space: `LinearSystem` objects
 
 * Bayesian estimation: `+distribution`, `Posterior`, `SystemProperty`, `SystemPrior`
+
 
 ---
 
 
-## Time series modeling
+## Overview of time series modeling tools
 
 Explore shorter-term empirical correlations, deal with the overfitting problem in high-dimensional models
 
-* Reduced-form vector autoregressions: `VAR`
+* Reduced-form vector autoregressions: `VAR` objects
+
+* Panel vector autoregressions: `VAR` objects with panel groups
 
 * Structural vector autoregressions: `SVAR`
 
-* Prior dummy observations for "bayesian" VARs: `+dummy`
+* Prior dummy observations for bayesian VARs: `+dummy`
 
 * Dynamic factor models: `Dynafit`
 
@@ -49,28 +52,30 @@ Explore shorter-term empirical correlations, deal with the overfitting problem i
 
 ---
 
-## Data management
+## Overview of data management
 
 Preprocess and postprocess time series and databanks (structs)
 
-* Dates: `Dater`, `+dater`
+* Dates convenient for evenly spaced periodicities (daily, business-daily, weekly, monthly, quarterly, half-yearly, yearly, integer): `Dater` objects, `dater` package
 
-* Time series: `Series`
+* Time series (dynamic non-frame) manipulation: `Series` objects
 
-* Databanks: `+databank`
+* Databanks, batch jobs, import/export from common formats: `databank` package
 
-* Interface to public database APIs: IMF, ECB, Fred
+* Customizable databank serialization to `json`, `csv` formats
+
+* Interface to public database APIs: `databank.fromIMF`, `databank.fromECB`, `databank.fromFred` subpackages
 
 
 ---
 
-## Visualization and reporting
+## Overview of visualization and reporting
 
-Chart data and create HTML reports
+Visualize data on screen and create HTML reports
 
-* On-screen charts: `databank.Chartpack`
+* Structured on-screen charting: `databank.Chartpack`
 
-* HTML reports: `+rephrase`
+* Standalone reports based on HTML/JS/CSS/JSON technology: `+rephrase`
 
-* Visualization utilities: `+visual`
+* Utilities for styling on-screen visualization: `+visual`
 
