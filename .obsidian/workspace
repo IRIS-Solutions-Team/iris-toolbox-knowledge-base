@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "internal/progress-2022Q2.md",
+            "file": "overview/functional-areas.md",
             "mode": "source",
             "source": true
           }
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "internal/progress-2022Q2.md",
+                "file": "overview/functional-areas.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -86,7 +86,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "internal/progress-2022Q2.md"
+                "file": "overview/functional-areas.md"
               }
             }
           }

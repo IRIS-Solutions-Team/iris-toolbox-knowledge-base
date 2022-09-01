@@ -7,7 +7,7 @@ __[IrisToolbox] for Macroeconomic Modeling__
 
 ---
 
-![[../assets/functional-areas.png]]
+![Functional areas](../assets/functional-areas.png)
 
 
 ---
