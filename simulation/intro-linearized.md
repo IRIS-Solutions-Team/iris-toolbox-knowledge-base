@@ -194,7 +194,7 @@ $$
 
 ---
 
-## Triangular transition matrix $T_\alpha$
+## Triangular transition matrix
 
 * Upper (block) triangular (1-by-1 or 2-by-2 blocks on the main diagonal)
 

@@ -32,10 +32,6 @@ __[IrisToolbox] for Macroeconomic Modeling__
 > Bleeding edge branch compatible with Matlab R2019b+; tested before pushed to GitHub
 
 
-
----
-
-
 ---
 
 ## Switchover to new Iris in production

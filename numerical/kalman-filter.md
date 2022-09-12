@@ -61,8 +61,6 @@ y_t = Z \, x_t + d + H \, u_t
 $$
 
 
-
-
 ---
 
 ## Initializing the filter
@@ -128,7 +126,7 @@ where  $\quad \Sigma_x = R \, \mathrm E\!\left[ e \, e' \right] \, R', \quad \Si
 
 ---
 
-## Observe $y$
+## Observe data
 
 * Observation of $y_1$ becomes available
 
