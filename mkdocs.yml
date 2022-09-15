@@ -1,4 +1,4 @@
-site_name: "Knowledge Base for IRIS"
+site_name: "Iris Toolbox Knowledge Base"
 
 theme:
     name: material
@@ -17,8 +17,8 @@ theme:
         - navigation.indexes
     custom_dir: overrides
 
-repo_url: https://github.com/Nordanis/iris-knowledge-base
-repo_name: iris-knowledge-base
+repo_url: https://github.com/IRIS-Solutions-Team/iris-toolbox-knowledge-base
+repo_name: iris-toolbox-knowledge-base
 edit_uri: ""
 
 extra_css:
