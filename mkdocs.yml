@@ -1,0 +1,52 @@
+site_name: "Knowledge Base for IRIS"
+
+theme:
+    name: material
+    font: 
+        code: "PT Mono"
+        text: "Montserrat"
+    icon: 
+        logo: octicons/book-24
+        repo: fontawesome/brands/github
+    favicon: ".mkdocs/book-open-blank-variant.ico?9"
+    palette:
+        scheme: default
+        primary: blue grey
+    features:
+        - navigation.tabs
+        - navigation.indexes
+    custom_dir: overrides
+
+repo_url: https://github.com/Nordanis/iris-knowledge-base
+repo_name: iris-knowledge-base
+edit_uri: ""
+
+extra_css:
+  - extra/extra.css
+
+extra:
+  version: 2021
+
+use_directory_urls: false
+docs_dir: source
+site_dir: site
+
+markdown_extensions:
+    - pymdownx.emoji:
+        emoji_index: !!python/name:materialx.emoji.twemoji
+        emoji_generator: !!python/name:materialx.emoji.to_svg
+    - pymdownx.critic
+    - pymdownx.highlight
+    - pymdownx.superfences
+    - footnotes
+    - meta
+    - pymdownx.arithmatex:
+        generic: true
+
+extra_javascript:
+    - extra/mathjax-config.js
+    - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+plugins:
+    - search
+    - awesome-pages

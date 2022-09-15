@@ -1,2 +1,7 @@
 .DS_Store
+*.m
+*.dll
+*.exe
 
+source/
+site/
