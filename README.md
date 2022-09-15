@@ -1,2 +1,2 @@
-# Knowledge Base for IRIS Toolbox
-This is a IRIS toolbox knowledge base.
+# Iris Toolbox Knowledge Base
+This is a Iris Toolbox knowledge base.
