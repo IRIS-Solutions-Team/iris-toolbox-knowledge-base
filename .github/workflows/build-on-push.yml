@@ -56,7 +56,6 @@ jobs:
 
       - name: Setup pages
         uses: actions/configure-pages@v2
-          path: $GITHUB_WORKSPACE
 
       - name: Upload pages artifact
         uses: actions/upload-pages-artifact@v1
