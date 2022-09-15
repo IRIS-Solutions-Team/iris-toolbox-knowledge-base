@@ -9,7 +9,7 @@ mkdir source
 find . -name '*.md' -o -name '.pages' \
     | xargs cp --parents -t ./source
 
-cp ./README.md ./source/index.md
+cp README.md ./source/index.md
 
 cp -r ./extra ./source/extra
 
