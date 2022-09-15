@@ -32,8 +32,6 @@ jobs:
 
       - name: Checkout iris-toolbox-knowledge-base
         uses: actions/checkout@v3
-        with:
-          path: iris-toolbox-knowledge-base
 
       - name: Install Python
         uses: actions/setup-python@v4
@@ -45,16 +43,16 @@ jobs:
                mkdocs-material \
                mkdocs-awesome-pages-plugin
 
-      - name: Copy source markdown files
-        run: source $GITHUB_WORKSPACE/iris-toolbox-knowledge-base/.github/workflows/copy-source.sh
+      - name: Copy index file
+        run: cp $GITHUB_WORKSPACE/README.md $GITHUB_WORKSPACE/source/index.md
 
       - name: Generate pages
         run: |
-          cd $GITHUB_WORKSPACE/iris-toolbox-knowledge-base
+          cd $GITHUB_WORKSPACE
           mkdocs build
 
       - name: Check
-        run: ls iris-toolbox-knowledge-base
+        run: ls $GITHUB_WORKSPACE
 
       - name: Setup pages
         uses: actions/configure-pages@v2
@@ -62,7 +60,7 @@ jobs:
       - name: Upload pages artifact
         uses: actions/upload-pages-artifact@v1
         with:
-          path: iris-toolbox-knowledge-base/site
+          path: $GITHUB_WORKSPACE/site
 
       - name: Deploy to GitHub Pages
         id: deployment
