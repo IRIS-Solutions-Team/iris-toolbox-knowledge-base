@@ -1,18 +1,18 @@
 cd ../iris-toolbox-knowledge-base
 
-if [[ -d source/ ]]; then
-    rm -rf source/
+if [[ -d ./source ]]; then
+    rm -rf ./source
 fi
 
 mkdir source
 
 find . -name '*.md' -o -name '.pages' \
-    | xargs cp --parents -t ./source/
+    | xargs cp --parents -t ./source
 
-cp ./source/README.md ./source/index.md
+cp ./README.md ./source/index.md
 
 cp -r ./extra ./source/extra
 
-tree -a ./source/ 
+tree -a ./source
 
 cd ..
