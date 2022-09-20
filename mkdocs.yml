@@ -24,9 +24,6 @@ edit_uri: ""
 extra_css:
   - extra/extra.css
 
-extra:
-  version: 2021
-
 use_directory_urls: false
 docs_dir: source
 site_dir: site
@@ -50,3 +47,4 @@ extra_javascript:
 plugins:
     - search
     - awesome-pages
+

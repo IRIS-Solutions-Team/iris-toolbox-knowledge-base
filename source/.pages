@@ -1,0 +1,12 @@
+title: Iris Toolbox Knowledge Base
+
+nav:
+    - Home: "index.md"
+    - overview
+    - model-source-language
+    - simulation
+    - steady-state
+    - numerical
+    - bayesian
+    - time-series-modeling
+
