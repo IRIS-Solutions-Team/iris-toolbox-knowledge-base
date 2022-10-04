@@ -1,6 +1,10 @@
+---
+title: Nonlinear solver
+---
+
 __[IrisToolbox] for Macroeconomic Modeling__
 
-# Nonlinear Equations Solver
+# Nonlinear equations solver
 
 `jaromir.benes@iris-toolbox.com`
 

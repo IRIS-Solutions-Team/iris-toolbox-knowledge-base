@@ -1,3 +1,6 @@
+---
+title: Iris model source language
+---
 
 __[IrisToolbox] for Macroeconomic Modeling__
 
@@ -8,6 +11,7 @@ __[IrisToolbox] for Macroeconomic Modeling__
 ---
 
 ## Structure of model source code
+
 * Model source code consists of any number of files with any number of any sections in any order
 
 * At least one transition equation and one transition variable
