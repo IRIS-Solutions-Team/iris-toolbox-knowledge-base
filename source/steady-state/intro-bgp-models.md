@@ -8,6 +8,12 @@ __[IrisToolbox] for Macroeconomic Modeling__
 
 `jaromir.benes@iris-toolbox.com`
 
+$$
+\newcommand{\ss}{\mathrm{ss}}
+\notag
+$$
+
+
 ---
 
 ## Key point:  Balanced growth models do not need to be stationarized
