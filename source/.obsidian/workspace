@@ -7,12 +7,8 @@
         "id": "1b2ebaaf3943e12e",
         "type": "leaf",
         "state": {
-          "type": "markdown",
-          "state": {
-            "file": "overview/functional-areas.md",
-            "mode": "source",
-            "source": true
-          }
+          "type": "empty",
+          "state": {}
         }
       }
     ],
@@ -69,7 +65,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "overview/functional-areas.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -85,9 +80,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "overview/functional-areas.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -99,15 +92,15 @@
   },
   "active": "1b2ebaaf3943e12e",
   "lastOpenFiles": [
+    "steady-state/unit-root-steady-state.md",
+    "overview/functional-areas.md",
     "internal/progress-2022Q2.md",
     "model-source-language/main-keywords.md",
-    "overview/functional-areas.md",
     "Untitled.md",
     "assets/functional-areas.png",
     "simulation/first-order-solution.md",
     "Untitled 2.md",
     "Untitled 1.md",
-    "simulation/stacked-time.md",
-    "bayesian/xxx.md"
+    "simulation/stacked-time.md"
   ]
 }
