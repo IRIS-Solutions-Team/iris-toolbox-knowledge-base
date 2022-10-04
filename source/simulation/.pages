@@ -1,4 +1,5 @@
 nav:
+    - index.md
     - intro-linearized.md
     - first-order-solution.md
     - intro-nonlinear.md

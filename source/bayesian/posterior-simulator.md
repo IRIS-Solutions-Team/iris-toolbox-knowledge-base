@@ -37,7 +37,7 @@ Discard $N_\mathrm{burn}$
 
 ---
 
-## *n*-th proposal
+## Next proposal
 
 $$
 \hat \theta_n = \theta_{n-1} + w_n = \theta_{n-1} + \sigma_{n-1} \, P_{n-1} \, u_n
