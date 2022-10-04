@@ -1,3 +1,6 @@
+---
+title: System priors
+---
 
 __[IrisToolbox] for Macroeconomic Modeling__
 

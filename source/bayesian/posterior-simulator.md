@@ -1,3 +1,6 @@
+---
+title: Posterior simulator
+---
 
 __[IrisToolbox] for Macroeconomic Modeling__
 

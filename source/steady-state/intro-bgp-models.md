@@ -1,3 +1,6 @@
+---
+title: BGP models
+---
 
 __[IrisToolbox] for Macroeconomic Modeling__
 
