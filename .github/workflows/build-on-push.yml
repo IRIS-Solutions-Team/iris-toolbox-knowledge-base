@@ -1,8 +1,8 @@
 name: Build iris-toolbox-knowledge-base pages on push
 
 on:
-  repository_dispatch:
-    types: [iris-toolbox-knowledge-base-push-master]
+  push:
+    branches: [ "master" ]
   workflow_dispatch:
 
 
