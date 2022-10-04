@@ -1,6 +1,6 @@
 ---
-title: Model language
+title: Model files
 ---
 
-# Iris model language
+# Iris model source files
 
