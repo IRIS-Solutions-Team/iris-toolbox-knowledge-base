@@ -4,11 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "1b2ebaaf3943e12e",
+        "id": "b714d70899a7e9ea",
         "type": "leaf",
         "state": {
-          "type": "empty",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "steady-state/intro-bgp-models.md",
+            "mode": "preview",
+            "source": true
+          }
         }
       }
     ],
@@ -65,6 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "steady-state/intro-bgp-models.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -80,7 +85,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "steady-state/intro-bgp-models.md"
+              }
             }
           }
         ]
@@ -90,17 +97,17 @@
     "width": 100,
     "collapsed": true
   },
-  "active": "1b2ebaaf3943e12e",
+  "active": "b714d70899a7e9ea",
   "lastOpenFiles": [
+    "asdfasdf.md",
+    "steady-state/intro-bgp-models.md",
     "steady-state/unit-root-steady-state.md",
     "overview/functional-areas.md",
     "internal/progress-2022Q2.md",
     "model-source-language/main-keywords.md",
-    "Untitled.md",
     "assets/functional-areas.png",
     "simulation/first-order-solution.md",
     "Untitled 2.md",
-    "Untitled 1.md",
-    "simulation/stacked-time.md"
+    "Untitled 1.md"
   ]
 }

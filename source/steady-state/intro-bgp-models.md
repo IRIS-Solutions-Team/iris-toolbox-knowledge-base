@@ -16,14 +16,16 @@ $$
 
 ---
 
-## Key point:  Balanced growth models do not need to be stationarized
+## Key point
+
+### Balanced growth models do not need to be stationarized
 
 We can handle (solve, simulate, analyze, etc.) balanced growth path models in their original nonstationary forms.
 
 
 ---
 
-## A very informal definition of a balanced growth path model
+### A very informal definition of a balanced growth path model
 
 A BGP model is a nonstationary model that we are able to manually stationarize so that 
 
@@ -39,14 +41,14 @@ and each variable in the transformed system is either of the following
 
 ---
 
-## The key point rephrased
+### The key point rephrased
 
 If we are able to manually stationarize the model, we don't actually need to do that...
 
 
 ---
 
-## Digression: Under what conditions does a nonstationary model feature a balanced-growth path?
+### Digression: Under what conditions does a nonstationary model feature a balanced-growth path?
 
 * This is a separate question
 
@@ -54,13 +56,23 @@ If we are able to manually stationarize the model, we don't actually need to do 
 
 * Two typical examples of necessary conditions:
 
-> Nominal terms in budget constraints and definitions (e.g. households' budget constaint, nominal expenditures in the definition of nominal GDP, etc.) grow at the same rate and 
+> 
+> Nominal terms in budget constraints and definitions (e.g. households'
+> budget constaint, nominal expenditures in the definition of nominal GDP,
+> etc.) grow at the same rate and 
+>
 
-> Elasticity of substitution (in production, consumption, etc.) between things that possibly grow at different rates is exactly one in the long run
+> 
+> Elasticity of substitution (in production, consumption, etc.) between
+> things that possibly grow at different rates is exactly one in the long
+> run
+> 
+
 
 ---
 
 ## Practical issues in solving BGP models
+
 
 * How to define, describe and calculate the (nonstationary) steady state of a BGP model?
 
@@ -71,24 +83,20 @@ If we are able to manually stationarize the model, we don't actually need to do 
 
 ---
 
-## How to describe the steady state of a nonstationary BGP model?
+### How to describe steady state of nonstationary BGP models?
 
 
-From the (very informal) definition of a BGP, each variables is one of the following:
+From the (very informal) definition of BGP, each variables has to be one of the following types:
 
 Type of variable | Behavior in steady state
 ---|---
 Stationary | Constant at a fixed unique level
 Flat | Not changing over time but an unpredetermined level
-??? | Changing over time: fixed first difference
-??? | Changing over time: fixed rate of change
+Linear growth | Changing over time: fixed first difference
+Log-linear growth | Changing over time: fixed rate of change
 
 
-We need to know which variable is which type before we start steady-state calculations
-
----
-
-## How to describe the steady state of a nonstationary BGP model?
+We need to know what type each variable when writing the model
 
 ![BGP](bgp.png)
 
@@ -97,11 +105,16 @@ We need to know which variable is which type before we start steady-state calcul
 
 * Read off two numerical values for each variable:
 
-1. its current level
-1. its change over time, i.e. first difference or rate of change
+    1. its current level
+    1. its change over time, i.e. first difference or rate of change
 
 * For everything we need to do, it does not matter which particular snapshot we take - any snapshot along the BGP is equally good (and equivalent to any other)
 
+---
+
+### Declare log-variables
+
+We need to know which variable is what type before we start steady-state calculations
 
 ---
 
@@ -127,41 +140,43 @@ to show its solution
 
 ---
 
-## Traditional way: Steady state
+## Traditional way
 
-1. Define new transformed variables
+### Steady state
 
-$$
-\begin{gathered}
-\hat a_t \equiv A_t / A_{t-1} \\[5pt]
-y_t \equiv Y_t / A_t
-\end{gathered}
-$$
+* Define new transformed variables
 
-<br/>
+    $$
+    \begin{gathered}
+    \hat a_t \equiv A_t / A_{t-1} \\[5pt]
+    y_t \equiv Y_t / A_t
+    \end{gathered}
+    $$
 
-2. Rewrite the original equations
+    <br/>
 
-$$
-\begin{gathered}
-A_{t} = \alpha \, A_{t-1} \exp \epsilon_t \quad\longrightarrow\quad
-\hat a_t = \alpha \exp \epsilon_t \\[5pt]
-y_t = \gamma  A_{t-1} \quad\longrightarrow\quad
-y_t = \left. \gamma \middle/ \hat a_t \right. 
-\end{gathered}
-$$
+* Rewrite the original equations
 
-<br/>
+    $$
+    \begin{gathered}
+    A_{t} = \alpha \, A_{t-1} \exp \epsilon_t \quad\longrightarrow\quad
+    \hat a_t = \alpha \exp \epsilon_t \\[5pt]
+    y_t = \gamma  A_{t-1} \quad\longrightarrow\quad
+    y_t = \left. \gamma \middle/ \hat a_t \right. 
+    \end{gathered}
+    $$
 
-3. Solve for the fixed point in $\hat a$, $y$, this uniquely determines 
+    <br/>
 
-* the steady-state rate of change in $a_t$ and $y_t$
-* the steady-state ratio $y_t/a_t$
+* Solve for the fixed point in $\hat a$, $y$, this uniquely determines 
+
+    * the steady-state rate of change in $a_t$ and $y_t$
+    * the steady-state ratio $y_t/a_t$
 
 
 ---
 
-## Traditional way: A point on the BGP
+### A point on the BGP
 
 * We can create an arbitrary point on the BGP by picking any valid value for $A_t$, and calculating the corresponding $Y_t \equiv y_t \, A_t$
 
@@ -174,21 +189,23 @@ $$
 
 ---
 
-## Traditional way: First-order approximation
+### First-order approximation
 
 4. Given the fixed point $\hat a_\ss$, $y_\ss$, calculate first-order Taylor expansion and approximate solution
 
-$$
-\begin{bmatrix}
-\hat a_t - \hat a_\ss \\
-y_t - y_\ss
-\end{bmatrix} 
-= T \, 
-\begin{bmatrix}
-\hat a_{t-1} - \hat a_\ss \\
-y_{t-1} - y_\ss
-\end{bmatrix} + R \, \epsilon_t
-$$
+    $$
+    \begin{bmatrix}
+    \hat a_t - \hat a_\ss \\
+    y_t - y_\ss
+    \end{bmatrix} 
+    = T \, 
+    \begin{bmatrix}
+    \hat a_{t-1} - \hat a_\ss \\
+    y_{t-1} - y_\ss
+    \end{bmatrix} + R \, \epsilon_t
+    $$
+
+    <br/>
 
 5. In forward-loking models, apply Blanchard-Kahn-Klein procedure using (generalized) eigenvalue
    decomposition to integrate out future expectations
@@ -196,67 +213,65 @@ $$
 
 ---
 
-## Traditional way: Go the extra mile
+### Go the extra mile
 
 5. We can alternatively calculate a log approximation, where the
    log transformation **preserves linearity** 
 
-$$
-\begin{bmatrix}
-\log \hat a_t - \log \hat a_\ss \\
-\log y_t - \log y_\ss
-\end{bmatrix} 
-= T^* \, 
-\begin{bmatrix}
-\log \hat a_{t-1} - \log \hat a_\ss \\
-\log y_{t-1} - \log y_\ss
-\end{bmatrix} + R^* \, \epsilon_t
-$$
+    $$
+    \begin{gathered}
+    \begin{bmatrix}
+    \log \hat a_t - \log \hat a_\ss \\
+    \log y_t - \log y_\ss
+    \end{bmatrix} 
+    = T^* \, 
+    \begin{bmatrix}
+    \log \hat a_{t-1} - \log \hat a_\ss \\
+    \log y_{t-1} - \log y_\ss
+    \end{bmatrix} + R^* \, \epsilon_t
+    \\[15pt]
+    \log \hat a_t \equiv \log A_t - \log A_{t-1} \\[5pt]
+    \log y_t \equiv \log Y_t - \log A_T
+    \end{gathered}
+    $$
 
-$$
-\begin{gathered}
-\log \hat a_t \equiv \log A_t - \log A_{t-1} \\[5pt]
-\log y_t \equiv \log Y_t - \log A_T
-\end{gathered}
-$$
-
-<br/>
+    <br/>
 
 6. Substitute the definitons of the log transformations back
 
-$$
-\begin{bmatrix}
-\log A_t - \log A_{t-1} - \log \hat a_\ss \\
-\log Y_t - \log A_t - \log y_\ss 
-\end{bmatrix} 
-= T^* \, 
-\begin{bmatrix}
-\log A_{t-1} - \log A_{t-2} - \log \hat a_\ss \\
-\log Y_{t-1} - \log A_t - \log y_\ss
-\end{bmatrix} 
-+ R^{*} \, \epsilon_t
-$$
+    $$
+    \begin{bmatrix}
+    \log A_t - \log A_{t-1} - \log \hat a_\ss \\
+    \log Y_t - \log A_t - \log y_\ss 
+    \end{bmatrix} 
+    = T^* \, 
+    \begin{bmatrix}
+    \log A_{t-1} - \log A_{t-2} - \log \hat a_\ss \\
+    \log Y_{t-1} - \log A_t - \log y_\ss
+    \end{bmatrix} 
+    + R^{*} \, \epsilon_t
+    $$
 
-<br/>
+    <br/>
 
 7. Rearrange to get 
 
-$$
-\begin{bmatrix}
-\log A_t \\
-\log A_{t-1} \\
-\log Y_t
-\end{bmatrix} 
-= T^{**}
-\begin{bmatrix}
-\log A_{t-1} \\
-\log A_{t-2} \\
-\log Y_{t-1}
-\end{bmatrix} 
-+ K^{**} + R^{**} \, \epsilon_t
-$$
+    $$
+    \begin{bmatrix}
+    \log A_t \\
+    \log A_{t-1} \\
+    \log Y_t
+    \end{bmatrix} 
+    = T^{**}
+    \begin{bmatrix}
+    \log A_{t-1} \\
+    \log A_{t-2} \\
+    \log Y_{t-1}
+    \end{bmatrix} 
+    + K^{**} + R^{**} \, \epsilon_t
+    $$
 
-<br/>
+    <br/>
 
 Note that
 
@@ -281,9 +296,9 @@ Absolutely no stationarizing step needed to calculate
 
 ---
 
-## Direct route: Steady state
+### Steady state
 
-1. Write the equations in their steady-state form for the following four unknowns:
+* Write the equations in their steady-state form for the following four unknowns:
 
    * Level of $A_t$, denoted by $A_\ss$
 
@@ -293,39 +308,39 @@ Absolutely no stationarizing step needed to calculate
 
    * Rate of change in $Y$, denoted by $\hat Y_\ss$
 
-<br/>
+    <br/>
 
-$$
-\begin{aligned}
-A_{t} = \alpha \, A_{t-1} \exp \epsilon_t
-&\quad\longrightarrow\quad
-A_\ss = \alpha \, A_\ss / \hat A_\ss
-\\[5pt]
-Y_t = \gamma \, A_{t-1}
-&\quad\longrightarrow\quad
-Y_\ss = \gamma \, A_\ss / \hat A_\ss
-\end{aligned}
-$$
+    $$
+    \begin{aligned}
+    A_{t} = \alpha \, A_{t-1} \exp \epsilon_t
+    &\quad\longrightarrow\quad
+    A_\ss = \alpha \, A_\ss / \hat A_\ss
+    \\[15pt]
+    Y_t = \gamma \, A_{t-1}
+    &\quad\longrightarrow\quad
+    Y_\ss = \gamma \, A_\ss / \hat A_\ss
+    \end{aligned}
+    $$
 
-<br/>
+    <br/>
 
-2. Problem: Two equations in four unknowns. Solution: Repeat the system at a different time point
+* Problem: Two equations in four unknowns. Solution: Repeat the system at a different time point
 
-$$
-\begin{gathered}
-A_\ss = \alpha \, A_\ss \, \hat A_\ss^{-1}
-\\[5pt]
-Y_\ss = \gamma \, A_\ss \, \hat A_\ss{}^{-1}
-\\[15pt]
-A_\ss \, \hat A_\ss{}^k = \alpha \, A_\ss \, \hat A_\ss{}^{k-1}
-\\[5pt]
-Y_\ss \, \hat Y_\ss{}^{k} = \gamma \, A_\ss\, \hat A_\ss{}^{k-1}
-\end{gathered}
-$$
+    $$
+    \begin{gathered}
+    A_\ss = \alpha \, A_\ss \, \hat A_\ss^{-1}
+    \\[5pt]
+    Y_\ss = \gamma \, A_\ss \, \hat A_\ss{}^{-1}
+    \\[15pt]
+    A_\ss \, \hat A_\ss{}^k = \alpha \, A_\ss \, \hat A_\ss{}^{k-1}
+    \\[5pt]
+    Y_\ss \, \hat Y_\ss{}^{k} = \gamma \, A_\ss\, \hat A_\ss{}^{k-1}
+    \end{gathered}
+    $$
 
 ---
 
-## Direct route: Singularity problem
+### Singularity problem
 
 * The system has infinitely many solutions, the Jacobian is singular 
 
@@ -336,83 +351,76 @@ $$
 
 ---
 
-## Direct route: First-order approximation
+### First-order approximation
 
-3. Calculate Taylor expansion of each model equation around the BGP 
+* Calculate Taylor expansion of each model equation around the BGP 
 
-   * w.r.t. to the **log** of the variables that show a constant rate of change
+    * w.r.t. to the **log** of the variables that grow at a constant rate of change
+    * w.r.t. the other variables 
 
-   * w.r.t. the other variables 
+    <br/>
 
-<br/>
+    $$
+    f_k \left( A_t, A_{t-1}, Y_{t}, Y_{t-1} \right) = 0
+    $$
 
-$$
-f_k \left( A_t, A_{t-1}, Y_{t}, Y_{t-1} \right) = 0
-$$
+    <br/>
 
-<br/>
-
-$$
-\left. \frac{\partial f_k\left( A_t, A_{t-1}, Y_{t}, Y_{t-1} \right)}{\partial \, \log A_t} \middle|_{A_t=A_\ss,\ A_{t-1}=A_\ss \hat A_\ss{}^{-1}, \ Y_t=Y_\ss, \ Y_{t-1}=Y_\ss \hat Y_\ss{}^{-1}} \right.
-$$
-
-$$
-\left. \frac{\partial f_k\left( A_t, A_{t-1}, Y_{t}, Y_{t-1} \right)}{\partial \, \log A_{t-1}} \middle|_{A_t=A_\ss,\ A_{t-1}=A_\ss \hat A_\ss{}^{-1}, \ Y_t=Y_\ss, \ Y_{t-1}=Y_\ss \hat Y_\ss{}^{-1}} \right.
-$$
- 
-$$
-\left. \frac{\partial f_k\left( A_t, A_{t-1}, Y_{t}, Y_{t-1} \right)}{\partial \, \log Y_{t}} \middle|_{A_t=A_\ss,\ A_{t-1}=A_\ss \hat A_\ss{}^{-1}, \ Y_t=Y_\ss, \ Y_{t-1}=Y_\ss \hat Y_\ss{}^{-1}} \right.
-$$
- 
-$$
-\left. \frac{\partial f_k\left( A_t, A_{t-1}, Y_{t}, Y_{t-1} \right)}{\partial \, \log Y_{t-1}} \middle|_{A_t=A_\ss,\ A_{t-1}=A_\ss \hat A_\ss{}^{-1}, \ Y_t=Y_\ss, \ Y_{t-1}=Y_\ss \hat Y_\ss{}^{-1}} \right.
-$$
-
-$$
-\left. \frac{\partial f_k\left( A_t, A_{t-1}, Y_{t}, Y_{t-1} \right)}{\partial \, \epsilon_{t}} \middle|_{A_t=A_\ss,\ A_{t-1}=A_\ss \hat A_\ss{}^{-1}, \ Y_t=Y_\ss, \ Y_{t-1}=Y_\ss \hat Y_\ss{}^{-1}} \right.
-$$
+    $$
+    \begin{gathered}
+    \left. \frac{\partial f_k\left( A_t, A_{t-1}, Y_{t}, Y_{t-1} \right)}{\partial \, \log A_t} \middle|_{A_t=A_\ss,\ A_{t-1}=A_\ss \hat A_\ss{}^{-1}, \ Y_t=Y_\ss, \ Y_{t-1}=Y_\ss \hat Y_\ss{}^{-1}} \right.
+    \\[30pt]
+    \left. \frac{\partial f_k\left( A_t, A_{t-1}, Y_{t}, Y_{t-1} \right)}{\partial \, \log A_{t-1}} \middle|_{A_t=A_\ss,\ A_{t-1}=A_\ss \hat A_\ss{}^{-1}, \ Y_t=Y_\ss, \ Y_{t-1}=Y_\ss \hat Y_\ss{}^{-1}} \right.
+    \\[30pt]
+    \left. \frac{\partial f_k\left( A_t, A_{t-1}, Y_{t}, Y_{t-1} \right)}{\partial \, \log Y_{t}} \middle|_{A_t=A_\ss,\ A_{t-1}=A_\ss \hat A_\ss{}^{-1}, \ Y_t=Y_\ss, \ Y_{t-1}=Y_\ss \hat Y_\ss{}^{-1}} \right.
+    \\[30pt]
+    \left. \frac{\partial f_k\left( A_t, A_{t-1}, Y_{t}, Y_{t-1} \right)}{\partial \, \log Y_{t-1}} \middle|_{A_t=A_\ss,\ A_{t-1}=A_\ss \hat A_\ss{}^{-1}, \ Y_t=Y_\ss, \ Y_{t-1}=Y_\ss \hat Y_\ss{}^{-1}} \right.
+    \\[30pt]
+    \left. \frac{\partial f_k\left( A_t, A_{t-1}, Y_{t}, Y_{t-1} \right)}{\partial \, \epsilon_{t}} \middle|_{A_t=A_\ss,\ A_{t-1}=A_\ss \hat A_\ss{}^{-1}, \ Y_t=Y_\ss, \ Y_{t-1}=Y_\ss \hat Y_\ss{}^{-1}} \right.
+    \end{gathered}
+    $$
  
  
-<br/>
+    <br/>
 
-4. Set up the dynamic system
+* Set up the dynamic system
 
-$$
-\begin{bmatrix}
-\log A_t - \log A_\ss \\[5pt]
-\log A_{t-1} - \log (A_\ss \hat A_\ss{}^{-1}) \\[5pt]
-\log Y_t - \log Y_\ss \\[5pt]
-\end{bmatrix}
-=
-T^{**}
-\begin{bmatrix}
-\log A_{t-1} - \log (A_\ss\hat A_\ss{}^{-1}) \\[5pt]
-\log A_{t-2} - \log (A_\ss \hat A_\ss{}^{-2}) \\[5pt]
-\log Y_{t-1} - \log (Y_\ss\hat Y_\ss{}^{-1}) \\[5pt]
-\end{bmatrix}
-+ R^{**} \, \epsilon_t
-$$
+    $$
+    \begin{bmatrix}
+    \log A_t - \log A_\ss \\[5pt]
+    \log A_{t-1} - \log (A_\ss \hat A_\ss{}^{-1}) \\[5pt]
+    \log Y_t - \log Y_\ss \\[5pt]
+    \end{bmatrix}
+    =
+    T^{**}
+    \begin{bmatrix}
+    \log A_{t-1} - \log (A_\ss\hat A_\ss{}^{-1}) \\[5pt]
+    \log A_{t-2} - \log (A_\ss \hat A_\ss{}^{-2}) \\[5pt]
+    \log Y_{t-1} - \log (Y_\ss\hat Y_\ss{}^{-1}) \\[5pt]
+    \end{bmatrix}
+    + R^{**} \, \epsilon_t
+    $$
 
-<br/>
+    <br/>
 
-5. Rearrange collecting the constant terms
+* Rearrange collecting the constant terms
 
-$$
-\begin{bmatrix}
-\log A_t \\[5pt]
-\log A_{t-1} \\[5pt]
-\log Y_t \\[5pt]
-\end{bmatrix}
-=
-T^{**}
-\begin{bmatrix}
-\log A_{t-1} \\[5pt]
-\log A_{t-2} \\[5pt]
-\log Y_{t-1} \\[5pt]
-\end{bmatrix}
-+ K^{**}
-+ R^{**} \, \epsilon_t
-$$
+    $$
+    \begin{bmatrix}
+    \log A_t \\[5pt]
+    \log A_{t-1} \\[5pt]
+    \log Y_t \\[5pt]
+    \end{bmatrix}
+    =
+    T^{**}
+    \begin{bmatrix}
+    \log A_{t-1} \\[5pt]
+    \log A_{t-2} \\[5pt]
+    \log Y_{t-1} \\[5pt]
+    \end{bmatrix}
+    + K^{**}
+    + R^{**} \, \epsilon_t
+    $$
 
 Note that
 
@@ -425,10 +433,11 @@ Note that
 
 ---
 
-## First-order solution matrices (aka state space)
+## First-order solution
 
 
-Iris works with two forms of solution (state-space forms)
+
+### Two forms of first-order solution in Iris
 
 
 * **Triangular** representation is used whenever we need to technically separate unit root dynamics from the stable dynamics of the model: stationarity diagnosis, Kalman filtering, autocovariance and power spectrum functions
@@ -438,7 +447,7 @@ Iris works with two forms of solution (state-space forms)
 
 ---
 
-## Non-triangular (rectangular) form
+### Non-triangular (rectangular) form
 
 Rectangular transition equation with no forward expansion
 
@@ -480,7 +489,7 @@ where
 
 ---
 
-## Triangular form
+### Triangular form
 
 Triangular transition equation with no forward expansion
 
@@ -520,3 +529,4 @@ where
 * $K^{\small\Delta}$ is an $nx \times 1$ transformed constant vector
 
 * $U$ is an invertible transformation matrix
+

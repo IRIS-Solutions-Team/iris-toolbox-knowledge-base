@@ -1,3 +1,5 @@
+
+
 .md-grid {
     max-width: 90rem;
 }
@@ -29,6 +31,10 @@ blockquote {
     list-style-type: square;
 }
 
+.md-typeset ul ul, ol ul {
+    list-style-type: "–  ";
+}
+
 .md-typeset code {
     font-size: 95%;
 }
@@ -55,20 +61,35 @@ blockquote {
 }
 
 .md-typeset h1 {
-    font-size: 1.6em;
+    font-size: 1.8em;
     font-weight: bold;
 }
 
 .md-typeset h2 {
     font-size: 1.4em;
+    font-weight: bold;
     margin-top: 2em;
+    color: var(--md-default-fg-color--light);
 }
 
 .md-typeset h3 {
-    font-size: 1.1em;
+    font-size: 1.3em;
     margin-top: 2em;
+    text-decoration-line: underline;
+    text-decoration-thickness: 0.3em;
+    text-decoration-skip-ink: none;
+    text-decoration-color: rgba(57,74,88,0.3);
 }
 
 .md-nav--secondary > ul > li > nav {
     display: none;
 }
+
+.md-typeset ol ol, .md-typeset ul ol {
+    list-style-type: decimal;
+}
+
+.md-typeset li {
+    margin-top: 1em;
+}
+
