@@ -1,5 +1,5 @@
 
-__[IrisToolbox] for Macroeconomic Modeling__
+__Iris Toolbox for Macroeconomic Modeling__
 
 # Key functional areas 
 
@@ -14,25 +14,18 @@ __[IrisToolbox] for Macroeconomic Modeling__
 
 ## Overview of structural modeling tools
 
-Develop and operate systems of structured equations
+Develop and operate systems of "structural" equations
 
-* Structural models including forward-looking nonlinear nonstationary models and DSGEs: `Model` objects
+* `Model`: Structural models including forward-looking nonlinear nonstationary models and DSGEs
 
-* Systems of explanatory equations, including regression equations with ARMA errors, preprocessing and postprocessing equations: `Explanatory` objects
+* `Explanatory`: Systems of explanatory equations, including regression equations with ARMA errors, preprocessing and postprocessing equations
 
-* IrisT source language and powerful preparser for writing model source codes with support for multi-file source, source code branching and looping
+* `Slang`: Iris source language and preparser for writing model source codes with support for multi-file source, source code branching and looping
 
-* Simulation plans, conditional simulations and forecasts, and model inversions: `Plan` objects
+* `Plan`: Simulation plans, conditional simulations and forecasts, and model inversions
 
-* Kalman filtering with time-varying conditioning assumptions: `+iris.mixin.Kalman` class
+* `+blazer`: Steady-state sequential-block analyzer for optimizing the steady-state calculations in large models
 
-* Steady-state sequential-block analyzer for optimizing the steady-state calculations in large models: `+blazer` package
-
-* General time-varying state space: `LinearSystem` objects
-
-* Bayesian estimation with individual and system priors, and random-walk posterior simulator:  `Posterior`, `SystemProperty`, `SystemPrior`
-
-* Probabilistic distribution objects optimized for use in estimation: `+distribution` package
 
 ---
 
@@ -41,19 +34,15 @@ Develop and operate systems of structured equations
 
 Explore shorter-term empirical correlations, deal with the overfitting problem in high-dimensional models
 
-* Reduced-form vector autoregressions: `VAR` objects
+* `VAR`: Reduced-form vector autoregressions and panel vector autoregressions
 
-* Panel vector autoregressions: `VAR` objects with panel groups
+* `SVAR`: Structural vector autoregressions
 
-* Structural vector autoregressions: `SVAR` objects
+* `Dynafit`: Dynamic factor models
 
-* Prior dummy observations for bayesian VARs: `+dummy` package
+* `+x13`: Interface to X13-Arima-Tramo-Seats
 
-* Dynamic factor models: `Dynafit`
-
-* Interface to `X13-Arima-Tramo-Seats`: `x13.season`
-
-* Univariate filters for time series objects
+*  Univariate filters for time series objects
 
 ---
 
@@ -61,11 +50,11 @@ Explore shorter-term empirical correlations, deal with the overfitting problem i
 
 Preprocess and postprocess time series and databanks (structs)
 
-* Dates convenient for evenly spaced periodicities (daily, business-daily, weekly, monthly, quarterly, half-yearly, yearly, integer): `Dater` objects, `+dater` package
+* `Dater` and `+dater`: Dates convenient for evenly spaced periodicities (daily, business-daily, weekly, monthly, quarterly, half-yearly, yearly, integer)
 
-* Time series (dynamic non-frame) manipulation: `Series` objects
+* `Series`: Time series (dynamic non-frame) manipulation
 
-* Databanks, batch jobs, import/export from common formats: `+databank` package
+* `+databank`: Databanks, batch jobs, import/export from common formats
 
 * Customizable databank serialization to `json`, `csv` formats
 
@@ -76,11 +65,26 @@ Preprocess and postprocess time series and databanks (structs)
 
 ## Overview of visualization and reporting
 
+
 Visualize data on screen and create HTML reports
 
-* Structured on-screen charting: `+databank.Chartpack`
+* `Chartpack`: Structured on-screen charting
 
-* Standalone reports based on HTML/JS/CSS/JSON technology: `+rephrase` package with `rephrase.js` plugin
+* `+rephrase`: Standalone reports based on HTML/JS/CSS/JSON technology
 
-* Utilities for styling on-screen visualization: `+visual`
+* `+visual`: Utilities for styling on-screen visualization 
 
+
+---
+
+## Overview of shrinkage estimation techniques
+
+Shrinkage estimators (bayesian)
+
+* `+dummy`:  Prior dummy observations constructor for "BVAR" estimation
+
+* `Posterior`: Posterior simulator
+
+* `SystemPriorWrapper`, `SystemProperty`, `SystemPrior`:  System prior implementation for `Model` objects
+
+* `+distribution`:  Common distribution package 

@@ -123,9 +123,11 @@ $$
 
 ## Log-status rules
 
-1. Variables that are growing at a constant rate of change in steady state must be declared as log-variables
+1. Variables that are growing at a constant first difference in steady state **must not** be declared as log-variables
 
-1. Variables that can take zero or negative values must not be declared as log-variables
+1. Variables that are growing at a constant rate of change in steady state **must** be declared as log-variables
+
+1. Variables that can be zero or negative **must not** be declared as log-variables
 
 1. Otherwise, it does not matter
 
